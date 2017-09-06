@@ -313,19 +313,65 @@ section{
 	border-bottom-right-radius: 1.5rem;
 }
 
-
-@media (max-width: 500px) {
+@media (max-width:380px){
 	.container{
-		width: 320px;
-		/* height:568px; */
+		width: 370px;
+		height:568px;
 		margin:auto;
 		border-radius:none;
 	}
 	header{
 		height: 80px;
+		border-radius: none;
 	}
-	nav{
-		height: 4.5rem;
+	#img-ct,
+	#img-show{
+		width: 200px;
+		height:200px;
+	}
+	#play-ct{
+		width: 80%;
+		height: 110px;
+	}
+	section{
+		width: 100%;
+		height: 434px;
+		margin: 0;
+		padding:30px 10px;
+		border-radius: 0 0 1.5rem 1.5rem;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border-radius: none;
+		background:rgba(110, 100, 100, 0.72);
+	}
+
+	.loginCt{
+		left: -62%;
+		top	: 0;
+		bottom: 0;
+		width: 60%;
+	}
+	#musicList{
+		left:0px;
+		bottom:-62%;
+		right:0px;
+		height: 60%;
+	}
+
+	.lrcCt{
+		top:300px;
+		width: 280px;
+	}
+}
+@media (max-width: 320px) {
+	.container{
+		width: 320px;
+		border-radius: none;
+	}
+	header{
+		height: 80px;
+		border-radius: none;
 	}
 	#img-ct,
 	#img-show{
@@ -345,6 +391,7 @@ section{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		border-radius: none;
 		background:rgba(110, 100, 100, 0.72);
 	}
 
