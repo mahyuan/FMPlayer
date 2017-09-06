@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="referrer" content="never">
+	<!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="./css/layout.css">
+	<link rel="stylesheet" href="./css/incnfont/icon.css">
+	<title>音乐播放器</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<span class="user" id="loginbtn">
+				<img id="avatar" src="../../../images/t1.jpg" alt="user">
+			</span>
+			<span id="logo">Player</span>
+			<span id="volume">
+				<i class="iconfont icon-vol ">&#xe604;</i>
+				<i class="iconfont icon-vol vol-hide ">&#xe72b;</i>
+			</span>
+		</header>
+		<!-- <nav>
+			<ul class="navbar">
+				<li id="list-pre" >
+					<i class="iconfont icon-list-pre">&#xe63d;</i>
+				</li>
+				<li id="list-ct">
+					<ul id="s-list"> -->
+					 	<!--
+						<li class="list-item">1拼接</li>
+						分类 -->
+					<!-- </ul>
+				</li>
+				<li id="list-next">
+					<i class="iconfont icon-list-next">&#xe641;</i>
+				</li>
+			</ul>
+		</nav> -->
+		<section>
+			<figure id="img-ct">
+				<a href="">
+					<img id="img-show" src="./images/t3.jpg" alt="">
+				</a>
+			</figure>
+			<figure id="play-ct">
+				<div class="extra-btn-ct">
+					<span id="thumb-btn"  class="iconfont extra-btn">&#xe612;</span>
+					<span id="collect-btn" class="iconfont extra-btn collected">&#xe72d;</span>
+					<span id="load-btn"  class="iconfont extra-btn">&#xe63b;</span>
+					<span id="review-btn"  class="iconfont extra-btn">&#xe647;</span>
+				</div>
+				<!-- <progress id="perc" value="50" max="100"></progress> -->
+				
+				<div class="play-wrap">
+					<span id="loop" class="randplsy listplay ingplay iconfont">&#xe615;</span>
+					<span id="preplay" class="iconfont">&#xe650;</span>
+					<span id="pause" class="pause play iconfont">&#xe618;</span>
+					<span id="nextplay" class="iconfont">&#xe617;</span>
+					<span id="listshow" class="iconfont">&#xe640;</span>
+				</div>
+			</figure>
+			<aside class="lrcCt">
+
+			</aside>
+		</section>
+		<aside class="loginCt">
+			<ul class="panel-ct">
+				<!-- 用户页面 -->
+				<!-- <li></li> -->
+			</ul>
+		</aside>
+		<aside id="musicList">
+			<ul id="songCt">
+				<!-- <li class="songitem"> -->
+					<!-- <span class="songTitle"></span> -->
+					<!-- <span class="artist"></span> -->
+				<!-- </li> -->
+			</ul>
+		</aside>
+	</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="./js/index.js"></script>
+<script src="./js/getdata.js"></script>
+</body>
+</html>
+
