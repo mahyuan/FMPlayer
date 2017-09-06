@@ -24,7 +24,6 @@ body{
 	box-shadow: 0 0 1rem rgba(102, 89, 89, 0.4), -0.3rem -0.3rem 1rem rgba(102, 89, 89, 0.4);
 	box-sizing: border-box;
 	overflow: hidden;
-	/* z-index: -1; */
 }
 .container::before{
 	/* content: ''; */
@@ -39,13 +38,15 @@ body{
 }
 header{
 	position: relative;
-	background-color:#00A8A1;
+	/* background-color:#00A8A1; */
+	background: linear-gradient(135deg, #2a2626, #473939 50%, #151567);
 	width:100%;
-	height:60px;
+	height:63px;
 	padding:0 15px;
 	margin:0;
 	border-top-left-radius: 1rem;
 	border-top-right-radius: 1rem;
+	border-bottom: 3px solid #693c3c;
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row nowrap;
@@ -84,15 +85,15 @@ header>span{
 }
 nav{
 	position: relative;
-	left:0;
+	/* left:0;
 	right: 0;
 	top: 0;
-	bottom: 200px;
-	height: 4rem;
+	bottom: 200px; */
+	height: 50px;
 	width: 100%;
 	margin:0;
 	padding:0;
-	background-color:#064d1d;
+	background: linear-gradient(135deg, #2a2626, #473939 50%, #151567);
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row nowrap;
@@ -108,6 +109,7 @@ nav{
 	justify-content: space-between;
 	flex-direction: row;
 	flex-wrap: nowrap;
+	align-items: center;
 }
 .narbar li{
 	padding: 0;
@@ -116,49 +118,52 @@ nav{
 #list-ct{
 	position: relative;
 	width: 70%;
+	height: 50px;
 	margin: 0 auto;
 	padding: 0;
 	text-align: center;
 	display: inline-block;
-	border: 1px solid blueviolet;
 	overflow: hidden;
+	box-sizing: border-box;
 }
 #s-list{
  	position: absolute;
 	left: 0;
 	top: 0;
-	width: 350px;
+	bottom: 0;
+	width: 3300px;
 	margin:0;
 	padding:0;
 	color: #DBE7E6;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 	flex-wrap: nowrap;
-	animation: listmovetest 10s linear  infinite;
+	animation: listmovetest 80s linear  infinite;
+	/* overflow: scroll; */
+	box-sizing: border-box;
 }
-.selected{
-	color: red;
-}
-.list-item{
+#s-list>li{
 	display: inline-block;
 	font-size: 2rem;
-	line-height: 2.5rem;
+	/* line-height: 30px; */
+	/* height: 30px; */
 	margin:0;
+	margin-left:8px;
 	padding:0;
 	cursor: pointer;
+	box-sizing: border-box;
 }
 
 @keyframes listmovetest{
 	0%{
-		left:0;
+		left:100px;
 	}
 	50%{
-		/* transform: translateX(-50%); */
-		left: -120px;
+		left: -3100px;
 	}
 	100%{
-		/* transform: translateX(0); */
-		left: 0;
+		left: 0100px;
 	}
 }
 main{
@@ -187,7 +192,7 @@ main{
 	flex-direction: column;
 	align-items: center;
 	border-radius: none;
-	background:rgba(110, 100, 100, 0.72);
+	background: linear-gradient(135deg, #2a2626, #473939 50%, #151567);
 }
 #img-ct{
 	margin: 0;
@@ -290,13 +295,13 @@ main{
 /* 弹窗 */
 .loginCt{
 	position: absolute;
-	left:-45%;
+	left:-62%;
 	top	: 0px;
 	bottom: 0px;
 	display: block;
 	transition: all 0.3s;
 	/* width: 0; */
-	width: 40%;
+	width: 60%;
 	border-radius: .5rem;
 	z-index: 2;
 	background-color: rgba(15, 87, 119, 0.90);
@@ -330,7 +335,7 @@ main{
 	right: 0px;
 	left:0px;
 	/* height: 180px; */
-	height: 60%;
+	height: 40%;
 	z-index: 2;
 	display: block;
 	color: #fff;
@@ -347,12 +352,9 @@ main{
 	.container{
 		width: 370px;
 		min-height:667px;
-		margin:auto;
-		border-radius:none;
 	}
 	header{
 		height: 80px;
-		border-radius: none;
 	}
 	.user{
 		height:40px;
@@ -363,7 +365,6 @@ main{
 		height: 40px;
 	}
 	#logo{
-
 		font-size: 2.5rem;
 	}
 
@@ -388,34 +389,12 @@ main{
 
 	}
 	#part1{
-		width: 100%;
 		height: 520px;
-		margin: 0;
 		padding-top:15px;
 		padding-left:10px;
 		padding-right: 10px;
 		padding-bottom: 20px;
-		border-radius: 0 0 1.5rem 1.5rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border-radius: none;
-		background:rgba(26, 23, 23, 0.72);
 	}
-
-	.loginCt{
-		left: -62%;
-		top	: 0;
-		bottom: 0;
-		width: 60%;
-	}
-	#musicList{
-		left:0px;
-		bottom:-62%;
-		right:0px;
-		height: 60%;
-	}
-
 	.lrcCt{
 		top:300px;
 		width: 280px;
@@ -425,11 +404,9 @@ main{
 	.container{
 		width: 320px;
 		min-height: 568px;
-		border-radius: none;
 	}
 	header{
 		height: 80px;
-		border-radius: none;
 	}
 	#img-ct{
 		width: 180px;
@@ -449,31 +426,9 @@ main{
 		height: 110px;
 	}
 	#part1{
-		width: 100%;
 		height: 434px;
-		margin: 0;
-		padding:30px 10px;
 		border-radius: 0 0 1.5rem 1.5rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border-radius: none;
-		background:rgba(110, 100, 100, 0.72);
 	}
-
-	.loginCt{
-		left: -62%;
-		top	: 0;
-		bottom: 0;
-		width: 60%;
-	}
-	#musicList{
-		left:0px;
-		bottom:-62%;
-		right:0px;
-		height: 60%;
-	}
-
 	.lrcCt{
 		top:300px;
 		width: 280px;

@@ -41,7 +41,7 @@ proto.bind = function(){
 
 	this.addEvent(_loginBtn, 'click', function(e){
 		e.stopPropagation();
-		_musicList.style.bottom = '-62%';
+		_musicList.style.bottom = '-42%';
 		_loginCt.style.left = '0';
 	})
 	this.addEvent(_listShowBtn, 'click', function(e){
@@ -61,7 +61,7 @@ proto.bind = function(){
 	this.addEvent(_container, 'click', function(e){
 		e.stopPropagation();
 		_loginCt.style.left = '-62%';
-		_musicList.style.bottom = '-62%';
+		_musicList.style.bottom = '-42%';
 	})
 
 	// 改变icon
