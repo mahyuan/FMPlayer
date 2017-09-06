@@ -316,7 +316,7 @@ section{
 @media (max-width:380px){
 	.container{
 		width: 370px;
-		height:568px;
+		height:600px;
 		margin:auto;
 		border-radius:none;
 	}
@@ -326,8 +326,8 @@ section{
 	}
 	#img-ct,
 	#img-show{
-		width: 200px;
-		height:200px;
+		width: 185px;
+		height:185px;
 	}
 	#play-ct{
 		width: 80%;
@@ -335,7 +335,7 @@ section{
 	}
 	section{
 		width: 100%;
-		height: 434px;
+		height: 520px;
 		margin: 0;
 		padding:30px 10px;
 		border-radius: 0 0 1.5rem 1.5rem;
