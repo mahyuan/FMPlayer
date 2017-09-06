@@ -19,7 +19,7 @@
 
 }
 .icon-vol{
-  font-size:2rem;
+  font-size:2.5rem;
   display: block;
   color: #fff;
 }
@@ -44,11 +44,9 @@
 #list-next{
 	text-align: right;
 }
-.collected{
-  color:#D93E4C;
-}
+
 figure .iconfont{
-  font-size: 1.5rem;
+  font-size: 2.2rem;
 }
 
 .extra-btn-ct{
@@ -56,6 +54,12 @@ figure .iconfont{
   display: flex;
   justify-content: space-around;
   flex-wrap: nowrap;
+}
+.extra-btn{
+  color: #eee;
+}
+.collected{
+  color:#D93E4C;
 }
 .extra-btn-ct>.iconfont{
   cursor: pointer;
@@ -70,7 +74,7 @@ figure .iconfont{
 .play-wrap>span{
   display: block;
   font-size:2rem;
-  color: #333;
+  color: #eee;
   cursor: pointer;
 }
 #play{
