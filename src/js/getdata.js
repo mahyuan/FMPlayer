@@ -1,9 +1,11 @@
 	var loginbtn = document.querySelector('#loginbtn')
 	var listShowBtn = document.querySelector('#listshow')
 	var musicList = document.querySelector	('.musicList')
+
 	var navbar = document.querySelector('#s-list')
 	var panel = document.querySelector('.panel-ct')
 	var songCt = document.querySelector('.songCt')
+
 	var songItem =  document.querySelector('.songCt>li')
 	var lrcCt = document.querySelector('.lrcCt')
 
@@ -43,16 +45,17 @@
 	panel.onclick = function(e){
 		if(e.target.tagName.toLowerCase() !== 'li') return
 		var channelId = e.target.getAttribute('data-channel-id')
-		debugger;
-		e.stopPropagation()
 		get('http://api.jirengu.com/fm/getSong.php', {channel: channelId}, function(ret){
 			// 'http://api.jirengu.com/fm/getSong.php?channel='+'channelId'
 			console.log(ret)
+			var obj = JSON.parse(JSON.stringify(ret))
+			console.log(ret.song[0].title)
+			console.log(ret.song[0].artist)
 			// console.log(channelId)
-			renderSong(ret.songs)
+			renderSong(ret.song)
 			getLrc(ret.song[0].lrc)
 			play(ret.song[0].url)
-			debugger;
+
 		})
 	}
 	pause.onclick = function (e){
@@ -71,7 +74,7 @@
 	}
 	listShowBtn.onclick = function(e){
 		e.stopPropagation()
-		// renderSong()
+		renderSong(e)
 	}
 	/*
 		这一段是测试的，随机获取song并播放
@@ -91,7 +94,6 @@
 		}).join('')
 		panel.innerHTML = html
 		songCt.innerHTML = html
-		debugger
 		navbar.innerHTML = html
 	}
 /*
@@ -102,9 +104,8 @@
 		songCt.innerHTML = html
 	}
 */
-/*
-	function renderSong(){
-		// var songs =[]
+
+	function renderSong(songs){
 
 		var html = songs.map(function(song){
 			return '<dt>' + key + '</dt><dd>' + song[key] + '</dd>'
@@ -127,7 +128,7 @@
 
 		})
 	}
-		*/
+
 
 
 	function getLrc(lrcUrl){
@@ -139,7 +140,7 @@
 	function play(url) {
 		music.src = url
 		music.play()
-		music.progressRender()
+		// music.progressRender()
 		// myAudio.src = url
 		// myAudio.play()
 		// myAudio.progressRender()

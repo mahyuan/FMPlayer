@@ -87,7 +87,6 @@ proto.bind = function(){
 		e.stopPropagation()
 		that.volumes.classList.toggle('vol-active')
 	})
-	console.log('this is :'+ this)
 
 }
 

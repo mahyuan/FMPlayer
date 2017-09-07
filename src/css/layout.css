@@ -368,7 +368,6 @@ main{
 	bottom: 0px;
 	display: block;
 	transition: all 0.3s;
-	/* width: 0; */
 	width: 60%;
 	border-radius: .5rem;
 	z-index: 2;
@@ -381,16 +380,14 @@ main{
 	overflow: auto;
 	padding: 5px;
 
-
 }
 .panel-ct>li,
 .songCt>li{
-	width: 100%;
-	margin:5px 5px;
+	margin:5px 15px;
 	font-size:1.4rem;
 	font-weight: bold;
 	line-height:2.5rem;
-	border-bottom: 1px dashed #345332;
+	border-bottom: 1px dashed #669363;
 	text-align: left;
 	display: block;
 	color: #fff;
@@ -415,6 +412,9 @@ main{
 }
 .songCt{
 	height:100%;
+	width: 100%;
+	padding:5px;
+	overflow: auto;
 	color: #fff;
 	background:rgba(3, 74, 104, 0.90);
 }
