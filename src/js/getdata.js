@@ -1,4 +1,6 @@
-
+	var loginbtn = document.querySelector('#loginbtn')
+	var listShowBtn = document.querySelector('#listshow')
+	var musicList = document.querySelector	('#musicList')
 	var navbar = document.querySelector('#s-list')
 	var panel = document.querySelector('.panel-ct')
 	var songCt = document.querySelector('#songCt')
@@ -8,9 +10,12 @@
 	var pause = document.querySelector('#pause')
 
 	var music = new Audio()
+	// var myAudio = document.querySelector('audio')
+
 	var progress = document.querySelector('progress')
 	var curTIME = document.querySelector('.curtime')
-	getChannels()
+
+
 	function get(url, data, callback, dataType) {
 		url += '?' + Object.keys(data).map(function(key){
 			return key + '=' + data[key]
@@ -31,11 +36,15 @@
 			console.log(ret.channels)
 		})
 	}
-
+	loginbtn.onclick = function(e){
+		e.stopPropagation()
+		getChannels()
+	}
 	panel.onclick = function(e){
 		if(e.target.tagName.toLowerCase() !== 'li') return
 		var channelId = e.target.getAttribute('data-channel-id')
 		debugger;
+		e.stopPropagation()
 		get('http://api.jirengu.com/fm/getSong.php', {channel: channelId}, function(ret){
 			// 'http://api.jirengu.com/fm/getSong.php?channel='+'channelId'
 			console.log(ret)
@@ -46,17 +55,23 @@
 			debugger;
 		})
 	}
-	pause.onclick = function (){
+	pause.onclick = function (e){
 		// if(e.target.tagName.toLowerCase() !== 'li') return
 			// var channelId = e.target.getAttribute('data-channel-id')
-		get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
+			e.stopPropagation()
+			get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
 			console.log(ret)
-			renderSong(ret.song[0])
+			renderSong(ret.song)
 			getLrc(ret.song[0].lrc)
 			play(ret.song[0].url)
 			debugger;
 		})
 		music.play()
+		// myAudio.play()
+	}
+	listShowBtn.onclick = function(e){
+		e.stopPropagation()
+		renderSong()
 	}
 	/*
 		这一段是测试的，随机获取song并播放
@@ -85,17 +100,29 @@
 		songCt.innerHTML = html
 	}
 */
-	function renderSong(song){
-		// var songs =
-		// var html = song.forEach(function(song){
-			// return '<dt>' + key + '</dt><dd>' + song[key] + '</dd>'
-			// return '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
-		// }).join('')
-		var 	html =  '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
+	function renderSong(){
+		// var songs =[]
+		/*
+		var html = songs.map(function(song){
+			return '<dt>' + key + '</dt><dd>' + song[key] + '</dd>'
+			return '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
+		}).join('')
+		// var html = '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
 
 
 		// debugger;
-		songCt.innerHtml = html
+		// songCt.innerHtml = html
+		console.log(html)
+		console.log("songCt")
+		songCt.appendChild(html)
+		*/
+		var html = '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
+		get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
+			console.log(html)
+			console.log("songCt")
+			songCt.appendChild(html)
+
+		})
 	}
 
 
@@ -104,15 +131,23 @@
 			lrcCt.innerHTML = ret
 		}, 'text')
 	}
+
 	function play(url) {
 		music.src = url
 		music.play()
 		music.progressRender()
+		// myAudio.src = url
+		// myAudio.play()
+		// myAudio.progressRender()
 	}
 
 	function PlaySong(){
-		pause.addEventListener('click',function(){
-			music.play()
+		pause.addEventListener('click',function(e){
+			e.stopPropagation()
+			// if()
+			// music.play(url)
+			myAudio.play()
+
 		},true)
 	}
 

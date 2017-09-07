@@ -20,6 +20,9 @@ proto.init = function(){
 	this.review = document.querySelector('#review-btn')
 	this.loop = document.querySelector('#loop')
 
+	this.imgCt = document.querySelector('.img-ct')
+	this.lrcCt = document.querySelector('.lrcCt')
+
 	this.preplay = document.querySelector('#preplay')
 	this.nextplay = document.querySelector('#nextplay')
 	this.pause = document.querySelector('#pause')
@@ -37,6 +40,8 @@ proto.bind = function(){
 		_musicList = this.musicList,
 		_container = this.container;
 		_panelItem = this.panelItem
+		_imgCt = this.imgCt
+		_lrcCt = this.lrcCt
 	var that = this
 
 	this.addEvent(_loginBtn, 'click', function(e){
@@ -68,6 +73,19 @@ proto.bind = function(){
 	this.addEvent(this.thumbs, 'click', function(){
 
 		that.thumbs.classList.add('vol-hide')
+	})
+
+	this.addEvent('_imgCt', 'click', function(e){
+		e.stopPropagation()
+		// console.log('clicked _imgCt')
+		_imgCt.classList.add('img-hide')
+		_lrcCt.classList.remove('lrc-hide')
+	})
+	this.addEvent('_lrcCt', 'click', function(e){
+		// e.stopPropagation()
+		// console.log('clicked _lrcCt')
+		_imgCt.classList.remove('img-hide')
+		_lrcCt.classList.add('lrc-hide')
 	})
 
 }

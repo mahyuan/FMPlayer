@@ -13,6 +13,9 @@
 <body>
 	<div class="container">
 		<header>
+			<audio autoplay="autoplay" controls>
+					Your browser does not support the <code>audio</code> element.
+			</audio>
 			<span class="user" id="loginbtn">
 				<img id="avatar" src="../src/images/t5.jpg" alt="user">
 			</span>
@@ -42,10 +45,12 @@
 		<main>
 			<section id="part1">
 				<figure id="img-ct">
-					<a href="">
+					<a class="img-ct" href="">
 						<img id="img-show" src="./images/t3.jpg" alt="">
 					</a>
+					<aside class="lrcCt"></aside>
 				</figure>
+
 				<figure id="play-ct">
 					<div class="extra-btn-ct">
 						<span id="thumb-btn"  class="iconfont extra-btn">&#xe612;</span>
@@ -74,9 +79,6 @@
 						<span id="listshow" class="iconfont">&#xe640;</span>
 					</div>
 				</figure>
-				<aside class="lrcCt">
-
-				</aside>
 			</section>
 			<section id="part2">
 				<ul>
