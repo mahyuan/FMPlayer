@@ -10,15 +10,20 @@ proto.init = function(){
 	this.container = document.querySelector('.container')
 	this.loginbtn = document.querySelector('#loginbtn')
 	this.avatar = document.querySelector('#avatar')
-	this.volumes = document.querySelector('#volume>i')
+
+	this.volumeBtn = document.querySelector('.volume>.icon-vol')
+	this.volumes = document.querySelector('.volume-box-ct')
+
 	this.loginCt = document.querySelector('.loginCt')
-	this.panelItem = document.querySelector('.panel-ct li')
+	// this.panelItem = document.querySelector('.panel-ct li')
 
 	this.thumb = document.querySelector('#thumb-btn')
 	this.collect = document.querySelector('#collect-btn')
 	this.load = document.querySelector('#load-btn')
 	this.review = document.querySelector('#review-btn')
 	this.loop = document.querySelector('#loop')
+
+	this.extraCt  = document.querySelector('.extra-btn-ct')
 
 	this.imgCt = document.querySelector('.img-ct')
 	this.lrcCt = document.querySelector('.lrcCt')
@@ -27,66 +32,62 @@ proto.init = function(){
 	this.nextplay = document.querySelector('#nextplay')
 	this.pause = document.querySelector('#pause')
 	this.listShowBtn = document.querySelector('#listshow')
-	this.musicList = document.querySelector	('#musicList')
+	this.musicList = document.querySelector	('.musicList')
 
 	this.perc = document.querySelector('#perc')
 
 }
 
 proto.bind = function(){
-	var _loginBtn = this.loginbtn,
-		_listShowBtn = this.listShowBtn,
-		_loginCt = this.loginCt,
-		_musicList = this.musicList,
-		_container = this.container;
-		_panelItem = this.panelItem
-		_imgCt = this.imgCt
-		_lrcCt = this.lrcCt
 	var that = this
-
-	this.addEvent(_loginBtn, 'click', function(e){
+	this.addEvent(this.loginbtn, 'click', function(e){
 		e.stopPropagation();
-		_musicList.style.bottom = '-42%';
-		_loginCt.style.left = '0';
+		that.musicList.style.bottom = '-42%';
+		that.loginCt.style.left = '0';
 	})
-	this.addEvent(_listShowBtn, 'click', function(e){
+	this.addEvent(this.listShowBtn, 'click', function(e){
 		e.stopPropagation();
-		_loginCt.style.left = '-62%';
-		_musicList.style.bottom = '0';
+		that.loginCt.style.left = '-62%';
+		that.musicList.style.bottom = '0';
 	})
 
-	this.addEvent(_loginCt, 'click', function(e){
+	this.addEvent(this.container, 'click', function(e){
+		e.stopPropagation();
+		that.loginCt.style.left = '-62%';
+		that.musicList.style.bottom = '-42%';
+	})
+	this.addEvent(this.loginCt, 'click', function(e){
 		e.stopPropagation();
 		return ;
 	})
-	this.addEvent(_musicList, 'click', function(e){
+	this.addEvent(this.musicList, 'click', function(e){
 		e.stopPropagation();
 		return;
 	})
-	this.addEvent(_container, 'click', function(e){
-		e.stopPropagation();
-		_loginCt.style.left = '-62%';
-		_musicList.style.bottom = '-42%';
+
+	this.addEvent(this.thumb, 'click', function(){
+		that.thumb.classList.toggle('extra-active')
+	})
+	this.addEvent(this.collect, 'click', function(){
+		that.collect.classList.toggle('extra-active')
 	})
 
-	// 改变icon
-	this.addEvent(this.thumbs, 'click', function(){
 
-		that.thumbs.classList.add('vol-hide')
-	})
-
-	this.addEvent('_imgCt', 'click', function(e){
+	this.addEvent(this.imgCt, 'click', function(e){
 		e.stopPropagation()
-		// console.log('clicked _imgCt')
-		_imgCt.classList.add('img-hide')
-		_lrcCt.classList.remove('lrc-hide')
+		that.imgCt.classList.add('img-hide')
+		that.lrcCt.classList.remove('lrc-hide')
 	})
-	this.addEvent('_lrcCt', 'click', function(e){
-		// e.stopPropagation()
-		// console.log('clicked _lrcCt')
-		_imgCt.classList.remove('img-hide')
-		_lrcCt.classList.add('lrc-hide')
+	this.addEvent(this.lrcCt, 'click', function(e){
+		e.stopPropagation()
+		that.imgCt.classList.remove('img-hide')
+		that.lrcCt.classList.add('lrc-hide')
 	})
+	this.addEvent(this.volumeBtn, 'click', function(e){
+		e.stopPropagation()
+		that.volumes.classList.toggle('vol-active')
+	})
+	console.log('this is :'+ this)
 
 }
 

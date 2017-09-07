@@ -14,9 +14,8 @@
   -moz-osx-font-smoothing: grayscale;
 }
 #volume{
-  display: block;
-  cursor: pointer;
-
+  /* display: block; */
+  /* cursor: pointer; */
 }
 .icon-vol{
   font-size:2.5rem;
@@ -55,14 +54,16 @@ figure .iconfont{
   justify-content: space-around;
   flex-wrap: nowrap;
 }
+
 .extra-btn{
   color: #eee;
 }
-.collected{
-  color:#D93E4C;
-}
+
 .extra-btn-ct>.iconfont{
   cursor: pointer;
+}
+.extra-active{
+  color:#D93E4C;
 }
 
 .play-wrap{

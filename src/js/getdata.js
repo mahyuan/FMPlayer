@@ -1,9 +1,9 @@
 	var loginbtn = document.querySelector('#loginbtn')
 	var listShowBtn = document.querySelector('#listshow')
-	var musicList = document.querySelector	('#musicList')
+	var musicList = document.querySelector	('.musicList')
 	var navbar = document.querySelector('#s-list')
 	var panel = document.querySelector('.panel-ct')
-	var songCt = document.querySelector('#songCt')
+	var songCt = document.querySelector('.songCt')
 	var songItem =  document.querySelector('.songCt>li')
 	var lrcCt = document.querySelector('.lrcCt')
 
@@ -48,7 +48,7 @@
 		get('http://api.jirengu.com/fm/getSong.php', {channel: channelId}, function(ret){
 			// 'http://api.jirengu.com/fm/getSong.php?channel='+'channelId'
 			console.log(ret)
-			console.log(channelId)
+			// console.log(channelId)
 			renderSong(ret.songs)
 			getLrc(ret.song[0].lrc)
 			play(ret.song[0].url)
@@ -61,7 +61,7 @@
 			e.stopPropagation()
 			get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
 			console.log(ret)
-			renderSong(ret.song)
+			renderSong(ret.songs)
 			getLrc(ret.song[0].lrc)
 			play(ret.song[0].url)
 			debugger;
@@ -71,7 +71,7 @@
 	}
 	listShowBtn.onclick = function(e){
 		e.stopPropagation()
-		renderSong()
+		// renderSong()
 	}
 	/*
 		这一段是测试的，随机获取song并播放
@@ -90,6 +90,8 @@
 			return '<li data-channel_id="'+channel.channel_id + '">' + channel.name + '</li>'
 		}).join('')
 		panel.innerHTML = html
+		songCt.innerHTML = html
+		debugger
 		navbar.innerHTML = html
 	}
 /*
@@ -100,9 +102,10 @@
 		songCt.innerHTML = html
 	}
 */
+/*
 	function renderSong(){
 		// var songs =[]
-		/*
+
 		var html = songs.map(function(song){
 			return '<dt>' + key + '</dt><dd>' + song[key] + '</dd>'
 			return '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
@@ -115,7 +118,7 @@
 		console.log(html)
 		console.log("songCt")
 		songCt.appendChild(html)
-		*/
+
 		var html = '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
 		get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
 			console.log(html)
@@ -124,6 +127,7 @@
 
 		})
 	}
+		*/
 
 
 	function getLrc(lrcUrl){
