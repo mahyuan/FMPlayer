@@ -8,7 +8,8 @@
 	var pause = document.querySelector('#pause')
 
 	var music = new Audio()
-
+	var progress = document.querySelector('progress')
+	var curTIME = document.querySelector('.curtime')
 	getChannels()
 	function get(url, data, callback, dataType) {
 		url += '?' + Object.keys(data).map(function(key){
@@ -106,6 +107,7 @@
 	function play(url) {
 		music.src = url
 		music.play()
+		music.progressRender()
 	}
 
 	function PlaySong(){
@@ -117,3 +119,22 @@
 	function $(selector) {
 		return document.querySelector(selector)
 	}
+	function progressRender(){
+		var curTime = parseInt(music.currentTime)
+		var minute = "00"
+		progress.getAttribute({'value': curTime})
+		if(curTime<10){
+			curTime = "0" + curTime
+		}
+		if(curTime>60){
+			minute = parseInt(curTime%60)
+			if(minute<10){
+				minute = "0" + minute
+			}
+			if(curTime<10){
+				curTime = "0" + curTime
+			}
+		}
+		curTIME.innerHTML = (minute + ':' + curTime)
+	}
+
