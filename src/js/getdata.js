@@ -11,11 +11,13 @@
 
 	var pause = document.querySelector('#pause')
 
+
 	var music = new Audio()
 	// var myAudio = document.querySelector('audio')
 
 	var progress = document.querySelector('progress')
-	var curTIME = document.querySelector('.curtime')
+	var curTimeCt = document.querySelector('.curtime')
+	var maxTimeCt	= document.querySelector('.maxTime')
 
 
 	function get(url, data, callback, dataType) {
@@ -52,7 +54,7 @@
 			console.log(ret.song[0].title)
 			console.log(ret.song[0].artist)
 			// console.log(channelId)
-			renderSong(ret.song)
+			// renderSong(ret.song)
 			getLrc(ret.song[0].lrc)
 			play(ret.song[0].url)
 
@@ -64,7 +66,7 @@
 			e.stopPropagation()
 			get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
 			console.log(ret)
-			renderSong(ret.songs)
+			// renderSong(ret.songs)
 			getLrc(ret.song[0].lrc)
 			play(ret.song[0].url)
 			debugger;
@@ -74,7 +76,7 @@
 	}
 	listShowBtn.onclick = function(e){
 		e.stopPropagation()
-		renderSong(e)
+		// renderSong(e)
 	}
 	/*
 		这一段是测试的，随机获取song并播放
@@ -104,7 +106,7 @@
 		songCt.innerHTML = html
 	}
 */
-
+/*
 	function renderSong(songs){
 
 		var html = songs.map(function(song){
@@ -128,7 +130,7 @@
 
 		})
 	}
-
+*/
 
 
 	function getLrc(lrcUrl){
@@ -150,8 +152,8 @@
 		pause.addEventListener('click',function(e){
 			e.stopPropagation()
 			// if()
-			// music.play(url)
-			myAudio.play()
+			music.play(url)
+			// myAudio.play()
 
 		},true)
 	}
@@ -159,6 +161,8 @@
 	function $(selector) {
 		return document.querySelector(selector)
 	}
+
+
 	function progressRender(){
 		var curTime = parseInt(music.currentTime)
 		var minute = "00"
@@ -175,6 +179,35 @@
 				curTime = "0" + curTime
 			}
 		}
-		curTIME.innerHTML = (minute + ':' + curTime)
+		curTimeCt.innerHTML = minute + ':' + curTime
 	}
+	function timeRender(){
+		var mDuration = parseInt(music.duration)
+		var minute = "00"
+		var maxTime = progress.getAttribute('max')
+		// console.log('max is :' +maxTime)
+
+		if(mDuration < 10){
+			mDuration = "0" +mDuration
+		}
+		if(mDuration>60){
+			minute = parseInt(mDuration/60)
+			mDuration = parseInt(mDuration%60)
+			if(minute<10){
+				minute = "0" + minute
+			}
+			if(mDuration<10){
+				mDuration = "0" + mDuration
+			}
+		}
+		maxTimeCt.innerHTML = minute+ ':' + mDuration
+	}
+	// timeRender()
+	pause.onclick = function(){
+		music.play()
+		play.style.display = 'none'
+		pause.style.display = 'block'
+	}
+
+
 

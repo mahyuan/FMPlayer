@@ -311,25 +311,48 @@ main{
 .extra-btn-ct{
 	width: 100%;
 }
-
+.curtime{
+	position: absolute;
+	left:-22px;
+	top:-4px;
+	color: #00A8A1;
+	font-size: 10px;
+	width:	20px;
+	height:	20px;
+}
+.maxTime{
+	position: absolute;
+	right:-22px;
+	top:-4px;
+	color: #1261D2;
+	font-size: 10px;
+	width:	20px;
+	height:	20px;
+}
 #perc{
-	height: 0.5rem;
 	width: 80%;
-	margin:0.5rem 1rem;
-	background:#00A8A1;
-	border-radius: 0.2rem;
-	color: #345332;
-	font-size: 0.2rem;
+	margin:5px 10px;;
 	position: relative;
+	font-size: 4px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+progress{
+	width: 100%;
+	height: 0px;
+	/* background:#00A8A1; */
+	border-radius: 3px;
+	border:3px solid #00A8A1;
 }
 #perc::before{
-	content:'0:21';
+	/* content:''; */
 	position: absolute;
 	left:-2.2rem;
 	top:-0.4rem;
 }
 #perc::after{
-	content:'4:22';
+	/* content:''; */
 	position: absolute;
 	right:-2.2rem;
 	top:-0.4rem;
