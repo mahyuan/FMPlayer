@@ -11,7 +11,7 @@ proto.init = function(){
 	this.loginbtn = document.querySelector('#loginbtn')
 	this.avatar = document.querySelector('#avatar')
 
-	this.volumeBtn = document.querySelector('.volume>.icon-vol')
+	this.volumeBtn = document.querySelector('.volume')
 	this.volumes = document.querySelector('.volume-box-ct')
 
 	this.loginCt = document.querySelector('.loginCt')

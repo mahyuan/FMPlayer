@@ -13,10 +13,10 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-#volume{
+/* #volume{ */
   /* display: block; */
   /* cursor: pointer; */
-}
+/* } */
 .icon-vol{
   font-size:2.5rem;
   display: block;
@@ -44,15 +44,15 @@
 	text-align: right;
 }
 
-figure .iconfont{
-  font-size: 2.2rem;
-}
-
 .extra-btn-ct{
-  padding:0 1rem;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: nowrap;
+    padding:0 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+
+}
+.extra-btn-ct>span{
+      font-size: 22px;
 }
 
 .extra-btn{
@@ -71,17 +71,41 @@ figure .iconfont{
   justify-content: space-between;
   flex-wrap: nowrap;
   align-items: center;
+  align-items: center;
+  height: 50px;
+  /* border:1px dotted red; */
 }
-.play-wrap>span{
+.play-wrap>.iconfont{
   display: block;
-  font-size:2rem;
+  font-size:20px;
+  width: 30px;
+  height: 30px;
   color: #eee;
   cursor: pointer;
+  /* border: 1px dotted red; */
 }
-#play{
-  font-size: 3rem;
+#pause{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  /* border: 1px dotted red; */
 }
-
+#pause>.play,
+#pause>.pause{
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  color: #eee;
+  cursor: pointer;
+  /* border: 1px dotted blue; */
+}
+.play{
+  display: none;
+}
+.pause{
+  display: block;
+}
 
 
 

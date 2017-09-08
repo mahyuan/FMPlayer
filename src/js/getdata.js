@@ -9,10 +9,15 @@
 	var songItem =  document.querySelector('.songCt>li')
 	var lrcCt = document.querySelector('.lrcCt')
 
-	var pause = document.querySelector('#pause')
-
+	var playCt = document.querySelector('#pause')
+	var pauseIcon = document.querySelector('.pause')
+	var playIcon = document.querySelector('.play')
+	var img_rotate = document.querySelector('#img-show')
 
 	var music = new Audio()
+	music.autoPlay = true
+	music.loop=true
+	music.volume = 1
 	// var myAudio = document.querySelector('audio')
 
 	var progress = document.querySelector('progress')
@@ -33,11 +38,13 @@
 		xhr.open('GET', url, true)
 		xhr.send()
 	}
-
+	getChannels()
 	function getChannels(e){
 		get('http://api.jirengu.com/fm/getChannels.php', {}, function(ret){
 			renderChanels(ret.channels)
 			console.log(ret.channels)
+			play(ret.song[0].url)
+			img_rotate.classList.add('img-rotate')
 		})
 	}
 	loginbtn.onclick = function(e){
@@ -57,23 +64,44 @@
 			// renderSong(ret.song)
 			getLrc(ret.song[0].lrc)
 			play(ret.song[0].url)
+			img_rotate.classList.add('img-rotate')
 
 		})
 	}
-	pause.onclick = function (e){
-		// if(e.target.tagName.toLowerCase() !== 'li') return
-			// var channelId = e.target.getAttribute('data-channel-id')
-			e.stopPropagation()
-			get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
-			console.log(ret)
-			// renderSong(ret.songs)
-			getLrc(ret.song[0].lrc)
-			play(ret.song[0].url)
-			debugger;
-		})
-		music.play()
-		// myAudio.play()
+
+	playCt.onclick = function (e){
+		if(!music.src){
+			if(e.target.tagName.toLowerCase() !== 'li') return
+				var channelId = e.target.getAttribute('data-channel-id')
+				e.stopPropagation()
+				get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
+				console.log(ret)
+				renderSong(ret.songs)
+				getLrc(ret.song[0].sid)
+				play(ret.song[0].url)
+				img_rotate.classList.add('img-rotate')
+				debugger;
+			})
+			music.play()
+		}else{
+			//以下可以定义一个函数，抽出来
+			if(playIcon.style.display == 'block'){
+				music.pause()
+				pauseIcon.style.display = 'block'
+				playIcon.style.display = 'none'
+				img_rotate.classList.remove('img-rotate')
+			}else{
+				music.play()
+				playIcon.style.display = 'block'
+				pauseIcon.style.display = 'none'
+				img_rotate.classList.add('img-rotate')
+
+			}
+
+			//以上
+		}
 	}
+
 	listShowBtn.onclick = function(e){
 		e.stopPropagation()
 		// renderSong(e)
@@ -133,10 +161,12 @@
 */
 
 
-	function getLrc(lrcUrl){
-		get(lrcUrl, {}, function(ret){
-			lrcCt.innerHTML = ret
-		}, 'text')
+	function getLrc(sid){
+		get('http://api.jirengu.com/fm/getLyric.php', {}, function(ret){
+			// lrcCt.innerHTML = ret
+			console.log(sid)
+			lrcCt.innerText = lrc
+		})
 	}
 
 	function play(url) {
@@ -163,10 +193,11 @@
 	}
 
 
-	function progressRender(){
+	var progressRender = function(){
 		var curTime = parseInt(music.currentTime)
 		var minute = "00"
-		progress.getAttribute({'value': curTime})
+		// progress.setAttribute(curTime)
+		// console.log(progress.getAttribute(curTime))
 		if(curTime<10){
 			curTime = "0" + curTime
 		}
@@ -179,9 +210,10 @@
 				curTime = "0" + curTime
 			}
 		}
+		debugger
 		curTimeCt.innerHTML = minute + ':' + curTime
 	}
-	function timeRender(){
+	var timeRender =function(){
 		var mDuration = parseInt(music.duration)
 		var minute = "00"
 		var maxTime = progress.getAttribute('max')
@@ -190,6 +222,7 @@
 		if(mDuration < 10){
 			mDuration = "0" +mDuration
 		}
+		debugger
 		if(mDuration>60){
 			minute = parseInt(mDuration/60)
 			mDuration = parseInt(mDuration%60)
@@ -200,14 +233,14 @@
 				mDuration = "0" + mDuration
 			}
 		}
+		debugger
 		maxTimeCt.innerHTML = minute+ ':' + mDuration
 	}
+	music.addEventListener("loadedmetadata", timeRender)
+	music.addEventListener("timeupdate", progressRender)
 	// timeRender()
-	pause.onclick = function(){
-		music.play()
-		play.style.display = 'none'
-		pause.style.display = 'block'
-	}
+
+
 
 
 
