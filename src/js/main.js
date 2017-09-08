@@ -279,6 +279,4 @@ proto.timeRender = function(){
 	this.maxTimeCt.innerHTML = minute+ ':' + mDuration
 }
 
-
-
 new Music(document.querySelector('.container'))
