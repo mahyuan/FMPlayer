@@ -1,24 +1,32 @@
-	var loginbtn = document.querySelector('#loginbtn')
+
 	var listShowBtn = document.querySelector('#listshow')
 	var musicList = document.querySelector	('.musicList')
 
 	var navbar = document.querySelector('#s-list')
-	var panel = document.querySelector('.panel-ct')
 	var songCt = document.querySelector('.songCt')
 
 	var songItem =  document.querySelector('.songCt>li')
 	var lrcCt = document.querySelector('.lrcCt')
+	var imgShow = document.querySelector('#img-show')
+
+	var playPre = document.querySelector('#preplay')
+	var playNext = document.querySelector('#nextplay')
 
 	var playCt = document.querySelector('#pause')
 	var pauseIcon = document.querySelector('.pause')
 	var playIcon = document.querySelector('.play')
 	var img_rotate = document.querySelector('#img-show')
 
+	var loopbtn = document.querySelector('#loop')
+	var loopL = document.querySelector('.icon-mulu')
+	var loopS = document.querySelector('.icon-single')
+
 	var music = new Audio()
 	music.autoPlay = true
 	music.loop=true
 	music.volume = 1
-	// var myAudio = document.querySelector('audio')
+	music.playing = false
+
 
 	var progress = document.querySelector('progress')
 	var curTimeCt = document.querySelector('.curtime')
@@ -43,16 +51,15 @@
 		get('http://api.jirengu.com/fm/getChannels.php', {}, function(ret){
 			renderChanels(ret.channels)
 			console.log(ret.channels)
-			play(ret.song[0].url)
+			// play(ret.song[0].url)
 			img_rotate.classList.add('img-rotate')
 		})
 	}
-	loginbtn.onclick = function(e){
-		e.stopPropagation()
-		getChannels()
-	}
-	panel.onclick = function(e){
+
+
+	songCt.onclick = function(e){
 		if(e.target.tagName.toLowerCase() !== 'li') return
+
 		var channelId = e.target.getAttribute('data-channel-id')
 		get('http://api.jirengu.com/fm/getSong.php', {channel: channelId}, function(ret){
 			// 'http://api.jirengu.com/fm/getSong.php?channel='+'channelId'
@@ -68,98 +75,46 @@
 
 		})
 	}
-
-	playCt.onclick = function (e){
-		if(!music.src){
-			if(e.target.tagName.toLowerCase() !== 'li') return
-				var channelId = e.target.getAttribute('data-channel-id')
-				e.stopPropagation()
-				get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
-				console.log(ret)
-				renderSong(ret.songs)
-				getLrc(ret.song[0].sid)
-				play(ret.song[0].url)
-				img_rotate.classList.add('img-rotate')
-				debugger;
-			})
-			music.play()
-		}else{
-			//以下可以定义一个函数，抽出来
-			if(playIcon.style.display == 'block'){
-				music.pause()
-				pauseIcon.style.display = 'block'
-				playIcon.style.display = 'none'
-				img_rotate.classList.remove('img-rotate')
-			}else{
-				music.play()
-				playIcon.style.display = 'block'
-				pauseIcon.style.display = 'none'
-				img_rotate.classList.add('img-rotate')
-
-			}
-
-			//以上
-		}
-	}
-
-	listShowBtn.onclick = function(e){
-		e.stopPropagation()
-		// renderSong(e)
-	}
-	/*
-		这一段是测试的，随机获取song并播放
-	function getSong(){
+	function getSongs(ret){
+		var channelId = e.target.getAttribute('data-channel-id')
 		get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
 			console.log(ret)
-			// console.log(channel_id)
-			renderSong(ret.song[0])
-			getLrc(ret.song[0].lrc)
+			// renderSong(ret.songs)
+			// getLrc(ret.song[0].sid)
 			play(ret.song[0].url)
+			img_rotate.classList.add('img-rotate')
+			imgShow.src = ret.song[0].picture
 		})
 	}
-	*/
+
+	playCt.onclick = function (e){
+		if(music.playing == true){
+			music.pause()
+			music.playing = false
+			pauseIcon.classList.add('active')
+			playIcon.classList.remove('active')
+			img_rotate.classList.remove('img-rotate')
+		}else{
+			music.play()
+			music.playing = true
+			pauseIcon.classList.remove('active')
+			playIcon.classList.add('active')
+			img_rotate.classList.add('img-rotate')
+		}
+	}
+	playPre.onclick = function(){
+		getSongs()
+	}
+	playNext.onclick = function(){
+		getSongs()
+	}
+
 	function renderChanels(channels){
 		var html = channels.map(function(channel){
 			return '<li data-channel_id="'+channel.channel_id + '">' + channel.name + '</li>'
 		}).join('')
-		panel.innerHTML = html
-		songCt.innerHTML = html
-		navbar.innerHTML = html
-	}
-/*
-	function renderSong(song) {
-		var html = Object.keys(song).map(function(key){
-		return '<dt>' + key + '</dt><dd>' + song[key] + '</dd>'
-		}).join('')
 		songCt.innerHTML = html
 	}
-*/
-/*
-	function renderSong(songs){
-
-		var html = songs.map(function(song){
-			return '<dt>' + key + '</dt><dd>' + song[key] + '</dd>'
-			return '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
-		}).join('')
-		// var html = '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
-
-
-		// debugger;
-		// songCt.innerHtml = html
-		console.log(html)
-		console.log("songCt")
-		songCt.appendChild(html)
-
-		var html = '<li><span data-title="song.title" >'+ song.title +'</span><span data-srtist="song.artist">'+ song.artist+'</span></li>'
-		get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
-			console.log(html)
-			console.log("songCt")
-			songCt.appendChild(html)
-
-		})
-	}
-*/
-
 
 	function getLrc(sid){
 		get('http://api.jirengu.com/fm/getLyric.php', {}, function(ret){
@@ -172,19 +127,12 @@
 	function play(url) {
 		music.src = url
 		music.play()
-		// music.progressRender()
-		// myAudio.src = url
-		// myAudio.play()
-		// myAudio.progressRender()
 	}
 
 	function PlaySong(){
 		pause.addEventListener('click',function(e){
 			e.stopPropagation()
-			// if()
 			music.play(url)
-			// myAudio.play()
-
 		},true)
 	}
 
@@ -210,19 +158,16 @@
 				curTime = "0" + curTime
 			}
 		}
-		debugger
+
 		curTimeCt.innerHTML = minute + ':' + curTime
 	}
 	var timeRender =function(){
 		var mDuration = parseInt(music.duration)
 		var minute = "00"
 		var maxTime = progress.getAttribute('max')
-		// console.log('max is :' +maxTime)
-
 		if(mDuration < 10){
 			mDuration = "0" +mDuration
 		}
-		debugger
 		if(mDuration>60){
 			minute = parseInt(mDuration/60)
 			mDuration = parseInt(mDuration%60)
@@ -233,14 +178,28 @@
 				mDuration = "0" + mDuration
 			}
 		}
-		debugger
 		maxTimeCt.innerHTML = minute+ ':' + mDuration
 	}
 	music.addEventListener("loadedmetadata", timeRender)
 	music.addEventListener("timeupdate", progressRender)
 	// timeRender()
 
+	loopbtn.onclick = function(){
 
+		if(music.loop == true){
+			music.loop = false
+			console.log(music.loop)
+			loopS.classList.add('active')
+			loopL.classList.remove('active')
+			debugger
+		}else{
+			music.loop = true
+			console.log(music.loop)
+			loopS.classList.remove('active')
+			loopL.classList.add('active')
+			debugger
+		}
+	}
 
 
 

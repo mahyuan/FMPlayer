@@ -1,10 +1,10 @@
 
-var Music = function(){
+let Music = function(){
 	this.init()
 	this.bind()
 	this.getChannels()
 }
-var proto =  Music.prototype
+let proto =  Music.prototype
 proto.addEvent = function (node, type, handler) {
 	if (!node) return false;
 	if (node.addEventListener) {
@@ -37,6 +37,8 @@ proto.init = function(){
 	this.extraCt  = document.querySelector('.extra-btn-ct')
 	this.imgCt = document.querySelector('.img-ct')
 	this.lrcCt = document.querySelector('.lrcCt')
+	this.songTitle = document.querySelector('.info-title')
+	this.songArtist = document.querySelector('.info-artist')
 	this.preplay = document.querySelector('#preplay')
 	this.nextplay = document.querySelector('#nextplay')
 	this.playCt = document.querySelector('#pause')
@@ -64,10 +66,10 @@ proto.init = function(){
 
 	this.music = document.querySelector('audio')
 
-	this.music.autoPlay = true
-	this.music.loop=true
-	this.music.volume = 1
-	this.music.playing = false
+	this.autoPlay = this.music.autoPlay = true
+	this.loop = this.music.loop=true
+	this.volume = this.music.volume = 1
+	this.playing = this.playing = false
 }
 
 proto.bind = function(){
@@ -109,58 +111,46 @@ proto.bind = function(){
 	})
 
 	this.addEvent(this.loopbtn, 'click', function(e){
-		if(this.music.loop == true){
-			this.music.loop = false
-			console.log(this.music.loop)
-			this.loopS.classList.add('active')
-			this.loopL.classList.remove('active')
+		if(that.loop == true){
+			that.loop = false
+			that.loopS.classList.add('active')
+			that.loopL.classList.remove('active')
 		}else{
-			this.music.loop = true
-			console.log(this.music.loop)
-			this.loopS.classList.remove('active')
-			this.loopL.classList.add('active')
+			that.loop = true
+			that.loopS.classList.remove('active')
+			that.loopL.classList.add('active')
 		}
 	})
 	this.addEvent(this.songCt, 'click', function(e){
 		if(e.target.tagName.toLowerCase() !== 'li') return
 		let channelId = e.target.getAttribute('data-channel-id')
-		get('http://api.jirengu.com/fm/getSong.php', {channel: channelId}, function(ret){
+		that.get('http://api.jirengu.com/fm/getSong.php', {channel: channelId}, function(ret){
 			// 'http://api.jirengu.com/fm/getSong.php?channel='+'channelId'
 			console.log(ret)
-			// let obj = JSON.parse(JSON.stringify(ret))
 			console.log(ret.song[0].title)
 			console.log(ret.song[0].artist)
-			// console.log(channelId)
-			// renderSong(ret.song)
-
-/*
-			this.getLrc(ret.song[0].lrc)
-			this.play(ret.song[0].url)
-			this.mgShow.classList.add('img-rotate')
-*/
-
 		})
 	})
 	this.addEvent(this.playCt, 'click', function(e){
-		if(music.playing == true){
-			music.pause()
-			music.playing = false
-			pauseIcon.classList.add('active')
-			playIcon.classList.remove('active')
-			img_rotate.classList.remove('img-rotate')
+		if(that.playing == true){
+			that.music.pause()
+			that.playing = false
+			that.pauseIcon.classList.add('active')
+			that.playIcon.classList.remove('active')
+			that.imgCt.classList.remove('img-rotate')
 		}else{
-			music.play()
-			music.playing = true
-			pauseIcon.classList.remove('active')
-			playIcon.classList.add('active')
-			img_rotate.classList.add('img-rotate')
+			that.music.play()
+			that.playing = true
+			that.pauseIcon.classList.remove('active')
+			that.playIcon.classList.add('active')
+			that.imgCt.classList.add('img-rotate')
 		}
 	})
 
-	this.addEvent( this.playPre,'click',function(e){
+	this.addEvent(this.playPre,'click',function(e){
 		that.getSongs()
 	})
-	this.addEvent( playNext, 'click',function(e){
+	this.addEvent(this.playNext, 'click',function(e){
 		that.getSongs()
 	})
 	this.addEvent(this.music ,'loadedmetadata',function(){
@@ -169,9 +159,15 @@ proto.bind = function(){
 	this.addEvent(this.music ,'timeupdate',function(){
 		that.progressRender()
 	})
+	this.addEvent(this.music, 'loadedmetadata', function(){
+		that.progressRender()
+	})
 
-
+	this.addEvent(this.music, 'timeupdate', function(){
+		that.timeRender()
+	})
 }
+
 proto.get = function(url, data, callback, dataType){
 	url += '?' + Object.keys(data).map(function(key){
 		return key + '=' + data[key]
@@ -187,8 +183,8 @@ proto.get = function(url, data, callback, dataType){
 }
 proto.getChannels = function(){
 	let that = this
-	get('http://api.jirengu.com/fm/getChannels.php', {}, function(ret){
-		renderChanels(ret.channels)
+	this.get('http://api.jirengu.com/fm/getChannels.php', {}, function(ret){
+		that.renderChanels(ret.channels)
 		console.log(ret.channels)
 		// play(ret.song[0].url)
 		that.imgShow.classList.add('img-rotate')
@@ -197,16 +193,38 @@ proto.getChannels = function(){
 proto.getSongs = function(ret){
 	let that = this
 	let channelId = e.target.getAttribute('data-channel-id')
-	get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
+	this.get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
 		console.log(ret)
 		// renderSong(ret.songs)
 		// getLrc(ret.song[0].sid)
-		that.music.play(ret.song[0].url)
-
+		that.play(ret.song[0].url)
 		that.imgShow.classList.add('img-rotate')
 		that.imgShow.src = ret.song[0].picture
+
+		that.songRender(title, artist, lrc)
 	})
 }
+//
+				proto.getLrc = function(sid){
+					var that = this
+					this.get('http://api.jirengu.com/fm/getLyric.php', {}, function(ret){
+						// lrcCt.innerHTML = ret
+						console.log(sid)
+						that.lrcCt.innerText = lrc
+					})
+				}
+//
+				proto.playNext = function(){
+					this.play()
+				}
+				proto.playPre = function(){
+					this.play()
+				}
+				proto.play = function(url){
+
+					this.getSongs(url)
+					this.music.play()
+				}
 
 proto.renderChanels = function(channels){
 	const html = channels.map(function(channel){
@@ -214,28 +232,18 @@ proto.renderChanels = function(channels){
 	}).join('')
 	this.songCt.innerHTML = html
 }
+proto.songRender = function(title, artist, lrc){
+	this.songTitle.append(title)
+	this.songArtis.append(artist)
 
-proto.getLrc = function(sid){
-	var that = this
-	get('http://api.jirengu.com/fm/getLyric.php', {}, function(ret){
-		// lrcCt.innerHTML = ret
-		console.log(sid)
-		that.lrcCt.innerText = lrc
-	})
-}
-proto.play = function(url){
-	this.music.src = url
-	this.music.play()
+							this.lrcCt.append(lrc)
+							//歌词要分解开时间
 }
 
-
-// function $(selector) {
-// 	return document.querySelector(selector)
-// }
 
 proto.progressRender = function (){
-	var curTime = parseInt(music.currentTime)
-	var minute = "00"
+	let curTime = parseInt(this.music.currentTime)
+	let minute = "00"
 	if(curTime<10){
 		curTime = "0" + curTime
 	}
@@ -248,13 +256,13 @@ proto.progressRender = function (){
 			curTime = "0" + curTime
 		}
 	}
-
-	curTimeCt.innerHTML = minute + ':' + curTime
+	this.curTimeCt.innerHTML = minute + ':' + curTime
 }
+
 proto.timeRender = function(){
-	let mDuration = parseInt(music.duration)
+	let mDuration = parseInt(this.music.duration)
 	let minute = "00"
-	let maxTime = progress.getAttribute('max')
+	let maxTime = this.progress.getAttribute('max')
 	if(mDuration < 10){
 		mDuration = "0" +mDuration
 	}
@@ -268,7 +276,7 @@ proto.timeRender = function(){
 			mDuration = "0" + mDuration
 		}
 	}
-	maxTimeCt.innerHTML = minute+ ':' + mDuration
+	this.maxTimeCt.innerHTML = minute+ ':' + mDuration
 }
 
 
