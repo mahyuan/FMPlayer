@@ -37,6 +37,7 @@ proto.init = function(){
 	this.extraCt  = document.querySelector('.extra-btn-ct')
 	this.imgCt = document.querySelector('.img-ct')
 	this.lrcCt = document.querySelector('.lrcCt')
+	that.lrc = document.querySelector('.lrc')
 	this.songTitle = document.querySelector('.info-title')
 	this.songArtist = document.querySelector('.info-artist')
 	this.preplay = document.querySelector('#preplay')
@@ -60,7 +61,11 @@ proto.init = function(){
 	this.loopL = document.querySelector('.icon-mulu')
 	this.loopS = document.querySelector('.icon-single')
 
-	this.progress = document.querySelector('progress')
+	this.progress = document.querySelector('.progress')
+	this.barNode = document.querySelector('.progress .bar')
+	this.NowNode = document.querySelector('.progress-now')
+
+
 	this.curTimeCt = document.querySelector('.curtime')
 	this.maxTimeCt	= document.querySelector('.maxTime')
 
@@ -70,6 +75,7 @@ proto.init = function(){
 	this.loop = this.music.loop=true
 	this.volume = this.music.volume = 1
 	this.playing = this.playing = false
+	let timer
 }
 
 proto.bind = function(){
@@ -166,8 +172,96 @@ proto.bind = function(){
 	this.addEvent(this.music, 'timeupdate', function(){
 		that.timeRender()
 	})
+
+	this.addEvent(this.barNode, 'click', function(){
+		var percent = e.offsetX/parseInt(getComputedStyle(this).width)
+		that.music.currentTime = percent * that.music.duration
+		that.NowNode.style.width = percent*100+"%"
+	})
 }
 
+//以下
+proto.getChannels = function(){
+	let that = this
+	// var  xhr = createXHR()
+	xhr = new XMLHttpRequest();
+	xhr.open('get', 'http://api.jirengu.com/fm/getChannels.php',true)
+	// xhr.setRequestHeader(myHeader, myValue)
+	xhr.send()
+	// if(xhr.status >= 200 && xhr.status < 300 || xhr.status == 304){
+		console.log(response)
+		let channel = ret.channels
+		let num = channel.lenght
+		console.log(channel[num])
+		that.getSong(channel[num])
+
+	// }else{
+	// 	console.log('获取列表是败!')
+	// }
+}
+proto.getSong = function(){
+	let that =  this
+	// var  xhr = createXHR();
+	$.ajax({
+		url: http://api.jirengu.com/fm/getSong.php,
+		method: 'get',
+		dataType: 'json',
+		data: {
+			'channel': 'data.channel_id'
+		}
+	}).done(function(song){
+		let ret = song.song[0]
+		console.log(ret)
+		let songURL = ret.url
+		let songTitle = ret.title
+		let songArtist = ret.artist
+		let songImg = ret.picture
+		let songId = ret.sid
+
+
+		that.music.setAttribute('src', songURL)
+		that.imgShow.setAttribute('src', songImg)
+		that.songArtist.innerText = songArtist
+		that.songTitle.innerText = songTitle
+
+
+								that.music.playSong()
+								that.lrc.empty()
+								that.getLyric()
+
+	}).fail(function(){
+		that.getSong()
+	})
+	/*
+	xhr = new XMLHttpRequest();
+	xhr.open('get', 'http://api.jirengu.com/fm/getSong.php', true);//异步请求
+	// xhr.setRequestHeader(myHeader,myValue)
+	xhr.send();
+	// if(xhr.status >= 200 && xhr.status < 300 || xhr.status == 304){
+		console.log(response)
+		let	songList = song.song[index]
+		let songURL = songList.url
+		let songTitle = songList.title
+		let songArtist = songList.artist
+		let songImg = songList.picture
+		let songId = songList.sid
+		that.music.setAttribute('src', songURL)
+		that.imgShow.setAttribute('src', songImg)
+		that.songArtist.innerText = songArtist
+		that.songTitle.innerText = songTitle
+		that.music.Play()
+		*/
+	// }else{
+	// 	console.log('获取歌单失败!')
+	// }
+}
+
+proto.playSong = function(){
+
+}
+
+//以上
+/*
 proto.get = function(url, data, callback, dataType){
 	url += '?' + Object.keys(data).map(function(key){
 		return key + '=' + data[key]
@@ -195,8 +289,8 @@ proto.getSongs = function(ret){
 	let channelId = e.target.getAttribute('data-channel-id')
 	this.get('http://api.jirengu.com/fm/getSong.php', {}, function(ret){
 		console.log(ret)
-		// renderSong(ret.songs)
-		// getLrc(ret.song[0].sid)
+		renderSong(ret.songs)
+		getLrc(ret.song[0].sid)
 		that.play(ret.song[0].url)
 		that.imgShow.classList.add('img-rotate')
 		that.imgShow.src = ret.song[0].picture
@@ -225,7 +319,57 @@ proto.getSongs = function(ret){
 					this.getSongs(url)
 					this.music.play()
 				}
+//
+*/
+/*
+var getSongMessage=function(data){
+	$.ajax({
+		  url: 'http://api.jirengu.com/fm/getSong.php',
+		  type:'get',
+		  dataType: 'json',
+		  data: {
+			'channel':'data.channel_id'
+		  }
+	 }).done(function(song){
+		  console.dir(song);
+		  $song=song.song[0];
+		  // console.dir(data.name);
+		  songURL=$song.url;
+		  songImg=$song.picture;
+		  songArtist=$song.artist;
+		  songTitle=$song.title;
+		  songId=$song.sid;
+		  $audio.attr('src',songURL);
+		  $background.attr('src',songImg);
+		  $musicName.text(songTitle);
+		  $singer.text(songArtist);
+		  console.dir(songURL);
+		  console.log(audio);
+	 });
 
+}
+function getChannel(){
+
+	$.ajax({
+		  url: 'http://api.jirengu.com/fm/getChannels.php',
+		  type:'get',
+		  dataType: 'json'
+
+	 }).done(function(response){
+		  console.dir(response);
+		  $channel=response.channels;
+		  var num=Math.floor(Math.random()*$channel.length);
+		  console.log($channel[num]);
+		  console.log($channel[num].channel_id);
+		  getSongMessage($channel[num]);
+	 });
+
+};
+*/
+
+
+
+//
 proto.renderChanels = function(channels){
 	const html = channels.map(function(channel){
 		return '<li data-channel_id="'+channel.channel_id + '">' + channel.name + '</li>'
@@ -234,7 +378,7 @@ proto.renderChanels = function(channels){
 }
 proto.songRender = function(title, artist, lrc){
 	this.songTitle.append(title)
-	this.songArtis.append(artist)
+	this.songArtist.append(artist)
 
 							this.lrcCt.append(lrc)
 							//歌词要分解开时间
@@ -256,6 +400,7 @@ proto.progressRender = function (){
 			curTime = "0" + curTime
 		}
 	}
+
 	this.curTimeCt.innerHTML = minute + ':' + curTime
 }
 
@@ -278,5 +423,46 @@ proto.timeRender = function(){
 	}
 	this.maxTimeCt.innerHTML = minute+ ':' + mDuration
 }
+
+proto.updateProgress = function(){
+	let percent = (this.music.currentTime/this.music.duration)*100+'%'
+	progressNowNode.style.width = percent
+
+	let minutes = parseInt(this.music.currentTime/60)
+	let seconds = parseInt(this.music.currentTime%60)+''
+	seconds = seconds.length == 2? seconds : '0'+seconds
+	this.curTimeCt.innerText = minutes + ':' + seconds
+}
+proto.onplaying = function(){
+	this.timer = setInterval(function(){
+		updateProgress()
+	}, 1000)
+	console.log('play')
+}
+proto.onpause = function(){
+	console.log('pause')
+	clearInterval(timer)
+}
+
+//////////////////
+/*
+		function loadMusic(songObj){
+			this.music.src = songObj.src
+			this.songTitle.innerText = songObj.title
+			this.songArtist.innerText = songObj.auther
+		}
+
+		function loadNextMusic(){
+			musicIndex++
+			musicIndex = musicIndex%musicList.length
+			loadMusic(musicList[musicIndex])
+		}
+
+		function loadLastMusic(){
+			musicIndex--
+			musicIndex = (musicIndex + musicList.length)%musicList.length
+			loadMusic(musicList[musicIndex])
+		}
+		*/
 
 new Music(document.querySelector('.container'))

@@ -13,44 +13,29 @@
 <body>
 	<div class="container">
 		<header>
-			<!-- <audio autoplay="autoplay" controls>
-					Your browser does not support the <code>audio</code> element.
-			</audio> -->
+			<audio autoplay="autoplay" controls>亲，您该换个浏览器啦！</audio>
 			<span class="user" id="loginbtn">
 				<img id="avatar" src="../src/images/t5.jpg" alt="user">
 			</span>
 			<span id="logo">Player</span>
 		</header>
-		<!-- <nav>
-			<ul class="navbar">
-				<li id="list-pre" >
-					<i class="iconfont icon-list-pre">&#xe63d;</i>
-				</li>
-
-				<li id="list-ct">
-					<ul id="s-list">
-
-					</ul>
-				</li>
-
-				<li id="list-next">
-					<i class="iconfont icon-list-next">&#xe641;</i>
-				</li>
-			</ul>
-		</nav> -->
 		<main>
 			<section id="part1">
-				<figure class="info-ct">
-					<h3 class="info-title">泡沫</h3>
-					<p class="info-artist">许巍</p>
-				</figure>
+
 				<figure id="img-ct">
 					<a class="img-ct" href="">
 						<img id="img-show" src="./images/t3.jpg" alt="">
 					</a>
-					<aside class="lrcCt"></aside>
 				</figure>
-
+				<figure class="info-ct">
+					<h3 class="info-title">泡沫</h3>
+					<p class="info-artist">许巍</p>
+					<div class="lrcCt">
+						<p class="lrc">
+						getdata.js:39 XHR finished loading: GET "http://api.jirengu.com/fm/getChannels.php?".
+						</p>
+					</div>
+				</figure>
 				<figure id="play-ct">
 					<div class="extra-btn-ct">
 						<span id="thumb-btn"  class="iconfont extra-btn">&#xe612;</span>
@@ -67,41 +52,30 @@
 					</div>
 					<div id="perc">
 						<span class="curtime">00:00</span>
-						<progress ></progress>
+						<div class="progress">
+							<div class="bar">
+								<div class="progress-total"></div>
+								<div class="progress-now"></div>
+							</div>
+						</div>
 						<span class="maxTime">00:00</span>
 					</div>
-					<!-- <div class="progress">
-						<span class="start"></span>
-						<div class="progress-bar">
-							<div class="now"></div>
-						</div>
-						<span class="end"></span>
-					</div> -->
-					<!-- <audio src=""></audio> -->
+
 					<div class="play-wrap">
-						<span id="loop" class="randplsy listplay ingplay iconfont">&#xe615;</span>
+						<span id="loop" class="iconf ont">
+							<span class="icon-mulu iconfont">&#xe615;</span>
+							<span class="icon-single active iconfont">&#xe606;</span>
+						</span>
 						<span id="preplay" class="iconfont">&#xe650;</span>
 						<span id="pause" class="iconf ont">
 							<span class="play iconfont">&#xe62f;</span>
-							<span class="pause iconfont">&#xe618;</span>
+							<span class="pause active iconfont">&#xe618;</span>
 						</span>
 						<span id="nextplay" class="iconfont">&#xe617;</span>
 						<span id="listshow" class="iconfont">&#xe640;</span>
 					</div>
 				</figure>
 			</section>
-			<!-- <section id="part2">
-				<ul>
-					<li>item1</li>
-					<li>item2</li>
-					<li>item3</li>
-					<li>item4</li>
-					<li>item5</li>
-					<li>item6</li>
-					<li>item7</li>
-					<li>item8</li>
-				</ul>
-			</section> -->
 			<aside class="loginCt">
 				<ul class="panel-ct">
 					<!-- 用户页面 -->
@@ -110,18 +84,15 @@
 			</aside>
 			<aside class="musicList">
 				<ul class="songCt">
-					<!-- <li class="songitem"> -->
-						<!-- <span class="songTitle"></span> -->
-						<!-- <span class="artist"></span> -->
-					<!-- </li> -->
+
 				</ul>
 			</aside>
-
 		</main>
 	</div>
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-<script src="./js/index.js"></script>
-<script src="./js/getdata.js"></script>
+<!-- <script src="./js/index.js"></script> -->
+<!-- <script src="./js/getdata.js"></script> -->
+<script src="./js/main.js"></script>
 </body>
 </html>
 

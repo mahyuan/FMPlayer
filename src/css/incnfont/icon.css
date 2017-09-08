@@ -84,6 +84,24 @@
   cursor: pointer;
   /* border: 1px dotted red; */
 }
+#loop{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+}
+#loop>span{
+  font-size: 25px;
+  width: 30px;
+  height: 30px;
+  color: #eee;
+  cursor: pointer;
+  display: none;
+}
+#loop>.active,
+#pause>.active{
+  display: block;
+}
 #pause{
   display: flex;
   justify-content: center;
@@ -91,21 +109,20 @@
   height: 40px;
   /* border: 1px dotted red; */
 }
-#pause>.play,
-#pause>.pause{
+#pause>span{
   font-size: 25px;
   width: 30px;
   height: 30px;
   color: #eee;
   cursor: pointer;
-  /* border: 1px dotted blue; */
+  display: none;
 }
-.play{
+/* .play{
   display: none;
 }
 .pause{
   display: block;
-}
+} */
 
 
 
