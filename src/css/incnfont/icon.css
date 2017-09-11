@@ -10,8 +10,12 @@
 .iconfont {
   font-family:"iconfont" !important;
   font-style:normal;
+  color:#EEE;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+.iconfont:hover {
+   color: #DDAAAA;
 }
 /* #volume{ */
   /* display: block; */
@@ -34,7 +38,7 @@
 
 #list-pre,
 #list-next{
-	color: #fff;
+	/* color: #fff; */
   cursor: pointer;
 }
 #list-pre{
@@ -80,7 +84,7 @@
   font-size:20px;
   width: 30px;
   height: 30px;
-  color: #eee;
+  /* color: #eee; */
   cursor: pointer;
   /* border: 1px dotted red; */
 }
@@ -94,7 +98,7 @@
   font-size: 25px;
   width: 30px;
   height: 30px;
-  color: #eee;
+  /* color: #eee; */
   cursor: pointer;
   display: none;
 }
@@ -113,7 +117,7 @@
   font-size: 25px;
   width: 30px;
   height: 30px;
-  color: #eee;
+  /* color: #eee; */
   cursor: pointer;
   display: none;
 }
