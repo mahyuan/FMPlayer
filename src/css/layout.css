@@ -61,15 +61,16 @@ header>span{
 }
 
 #logo{
-	/* font-family: ; */
+	font-family:"CommercialScript BT","lobster", "ParkAvenue BT","STKaiti", "微软雅黑";
 	font-weight: bold;
 	font-size: 2rem;
 	color: red;
-	text-align: center;
+	text-align: right;
 	display: inline-block;
 	line-height:60px;
 	height: 60px;
 	width: 60%;
+	padding-right: 15px;
 	margin-left: 1rem;
 
 }
