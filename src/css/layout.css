@@ -61,9 +61,9 @@ header>span{
 }
 
 #logo{
-	font-family:"CommercialScript BT","lobster", "ParkAvenue BT","STKaiti", "微软雅黑";
+	font-family:"CommercialScript BT","STKaiti","lobster", "ParkAvenue BT", "微软雅黑";
 	font-weight: bold;
-	font-size: 2rem;
+	font-size: 25px;
 	color: red;
 	text-align: right;
 	display: inline-block;
