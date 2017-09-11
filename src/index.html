@@ -5,7 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<meta name="referrer" content="never">
-	<!-- <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 	<link rel="stylesheet" href="./css/layout.css">
 	<link rel="stylesheet" href="./css/incnfont/icon.css">
 	<title>音乐播放器</title>
@@ -13,15 +12,14 @@
 <body>
 	<div class="container">
 		<header>
-			<audio autoplay="autoplay" controls>亲，您该换个浏览器啦！</audio>
+			<audio src = "" autoplay="autoplay"  controls></audio>
 			<span class="user" id="loginbtn">
 				<img id="avatar" src="../src/images/t5.jpg" alt="user">
 			</span>
-			<span id="logo">Player</span>
+			<span id="logo">My Player</span>
 		</header>
 		<main>
 			<section id="part1">
-
 				<figure id="img-ct">
 					<a class="img-ct" href="">
 						<img id="img-show" src="./images/t3.jpg" alt="">
@@ -30,10 +28,10 @@
 				<figure class="info-ct">
 					<h3 class="info-title">泡沫</h3>
 					<p class="info-artist">许巍</p>
-					<div class="lrcCt">
-						<p class="lrc">
-						getdata.js:39 XHR finished loading: GET "http://api.jirengu.com/fm/getChannels.php?".
-						</p>
+					<div class="lyrcCt">
+						<!-- <p class="lyric">
+
+						</p> -->
 					</div>
 				</figure>
 				<figure id="play-ct">
@@ -47,6 +45,7 @@
 								<div class="volume-box-ct">
 									<p class="volume-box"></p>
 								</div>
+								<div class="volume-bar"></div>
 							</div>
 						</span>
 					</div>
@@ -54,13 +53,13 @@
 						<span class="curtime">00:00</span>
 						<div class="progress">
 							<div class="bar">
-								<div class="progress-total"></div>
 								<div class="progress-now"></div>
 							</div>
+							<div class="progress-bar"></div>
 						</div>
+
 						<span class="maxTime">00:00</span>
 					</div>
-
 					<div class="play-wrap">
 						<span id="loop" class="iconf ont">
 							<span class="icon-mulu iconfont">&#xe615;</span>

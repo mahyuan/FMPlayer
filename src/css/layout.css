@@ -73,12 +73,9 @@ header>span{
 	margin-left: 1rem;
 
 }
-nav{
+
+/* nav{
 	position: relative;
-	/* left:0;
-	right: 0;
-	top: 0;
-	bottom: 200px; */
 	height: 50px;
 	width: 100%;
 	margin:0;
@@ -133,20 +130,18 @@ nav{
 	align-items: center;
 	flex-wrap: nowrap;
 	animation: listmovetest 80s linear  infinite;
-	/* overflow: scroll; */
 	box-sizing: border-box;
 }
 #s-list>li{
 	display: inline-block;
 	font-size: 2rem;
-	/* line-height: 30px; */
-	/* height: 30px; */
 	margin:0;
 	margin-left:8px;
 	padding:0;
 	cursor: pointer;
 	box-sizing: border-box;
 }
+*/
 
 @keyframes listmovetest{
 	0%{
@@ -161,20 +156,19 @@ nav{
 }
 
 .volume{
-	cursor: pointer;
 	position: relative;
 }
 .volume-pro{
 	position: absolute;
 	bottom: 25px;
 	left: 50%;
-	display: block;
+	display: none;
 	width:0	;
 	height: 200px;
 }
 .volume-box-ct{
-	height: 100%;
-	width:5px;
+	height: 200px;
+	width:10px;
 	background: #5c8a5c;
 	border-radius: 2.5px;
 	position: relative;
@@ -182,21 +176,34 @@ nav{
 	bottom: 0;
 	transform: translateX(-50%);
 	box-shadow: 1px 1px 1px rgba(71, 81, 68, 0.6), -1px -1px 1px rgba(73, 134, 73, 0.6);
-	display: none;
+	display: block;
+}
+.volume-bar{
+	height: 200px;
+	width:10px;
+	background: rgba(253, 238, 238, 0.1);
+	border-radius: 2.5px;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	box-shadow: 1px 1px 1px rgba(71, 81, 68, 0.6), -1px -1px 1px rgba(73, 134, 73, 0.6);
+	display: block;
+	cursor: pointer;
+
 }
 .vol-active{
 	display: block;
 }
 .volume-box{
 	position: absolute;
-	left: -50%;
-	bottom: 20px;
+	left: 0;
+	bottom: 0;
 	width: 10px;
-	height: 20px;
+	height: 100px;
 	border-radius: 5px;
 	background:#a8a6b6;
 	box-shadow: 1px 1px 1px rgba(71, 81, 68, 0.6), -1px -1px 1px rgba(73, 134, 73, 0.6);
-
 }
 main{
 	/* width: 100%; */
@@ -205,7 +212,6 @@ main{
 	left:0;
 	top:0;
 	bottom: 0;
-
 }
 #part1{
 	position: relative;
@@ -235,13 +241,13 @@ main{
 }
 .info-title{
 	color:#fdff;
-	font-size:30px;
+	font-size:22px;
 }
 .info-artist{
 	color:#fdff;
 	font-size:20px;
 }
-.lrcCt{
+.lyricCt{
 	width: 100%;
 	height: 50px;
 	font-size: 1.5rem;
@@ -253,7 +259,7 @@ main{
 	color: #1261D2;
 	text-align: center;
 }
-.lrc{
+.lyric{
 	font-size: 20px;
 	display: inline-block;
 	margin-left: auto;
@@ -267,14 +273,12 @@ main{
 	height: 200px;
 	position: relative;
 }
-/* .img-hide{
-	display: none;
-} */
 .img-ct{
 	position: absolute;
 	top: 0;
 	left:0;
 	height: 200px;
+	width: 200px;
 	padding:0 auto;
 	border:10px solid #5a4747;
 	box-shadow: 1px 1px 1px rgba(145, 145, 175, 0.8), -1px -1px 1px rgba(145, 145, 175, 0.8);
@@ -284,7 +288,6 @@ main{
 	width: 180px;
 	height: 180px;
 	border-radius: 50%;
-
 }
 .img-rotate{
 	animation: img-r 10s linear infinite;
@@ -314,13 +317,13 @@ main{
 	width: 100%;
 }
 #perc{
-	width: 80%;
+	min-width: 80%;
 	margin:5px 10px;;
 	position: relative;
 	font-size: 4px;
-	display: flex;
+	/* display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: center; */
 }
 .curtime{
 	position: absolute;
@@ -328,7 +331,6 @@ main{
 	top:-4px;
 	color: #00A8A1;
 	font-size: 10px;
-	width:	20px;
 	height:	20px;
 }
 .maxTime{
@@ -337,28 +339,49 @@ main{
 	top:-4px;
 	color: #1161D2;
 	font-size: 10px;
-	width:	20px;
 	height:	20px;
 }
-.progress{
+
+.progress {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 	width: 100%;
-	height: 0px;
+	background: #5c7895;
+	border: 1px dashed #5c7895;
 	border-radius: 3px;
-	border:3px solid #00A8A1;
-}
-.progress .bar {
-	height: 3px;
-	margin-top: 5px;
-	background-color: rgba(0,0,0,0.2);
-	cursor: pointer;
-}
-.progress .progress-now{
-	background-color: #ee8a87;
-	height: 3px;
-	width: 0;
-	position: relative;
 }
 
+.bar {
+	position: relative;
+	background: rgba(77, 192, 80, 0.90);
+	height: 5px;
+	vertical-align: 2px;
+	border-radius: 3px;
+	cursor: pointer;
+	z-index: initial;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.progress-now{
+	display: block;
+	height: 5px;
+	margin: 0;
+	background: rgba(77, 192, 80, 0.90);
+}
+.progress-bar{
+	display: block;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 5px;
+	margin: 0;
+	background: rgba(206, 219, 206, 0.1);
+	cursor: pointer;
+}
 .play-wrap{
 	height: 3rem;
 	width: 100%;
@@ -396,8 +419,6 @@ main{
 	color: #fff;
 	cursor: pointer;
 }
-
-
 .musicList{
 	position: absolute;
 	bottom: -62%;
@@ -426,7 +447,6 @@ main{
 	.container{
 		width: 370px;
 		min-height:667px;
-
 	}
 	header{
 		height: 80px;
@@ -448,7 +468,8 @@ main{
 		width: 190px;
 		height:190px;
 	}
-	#img-ct>a{
+	.img-ct{
+		width: 190px;
 		height:190px;
 	}
 	#img-show{
@@ -474,11 +495,17 @@ main{
 	.info-ct{
 		height: 130px;
 	}
-	.lrcCt{
+	.lyricCt{
 		height: 40;
 	}
-	.lrc{
+	.lyric{
 		font-size: 18px;
+	}
+	.info-title{
+		font-size:20px;
+	}
+	.info-artist{
+		font-size:18px;
 	}
 }
 @media (max-width: 320px) {
@@ -493,8 +520,8 @@ main{
 		width: 180px;
 		height:180px;
 	}
-	#img-ct>a{
-		/* width: 180px; */
+	.img-ct{
+		width: 180px;
 		height:180px;
 	}
 	#img-show{
@@ -512,11 +539,17 @@ main{
 	.info-ct{
 		height: 110px;
 	}
-	.lrcCt{
+	.lyricCt{
 		height: 35px;
 	}
-	.lrc{
+	.lyric{
 		font-size: 16px;
+	}
+	.info-title{
+		font-size:18px;
+	}
+	.info-artist{
+		font-size:16px;
 	}
 }
 
@@ -525,6 +558,7 @@ main{
 ::-webkit-scrollbar {
 	width:8px;
 }
+
 /* 滚动槽 */
 ::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset006pxrgba(0,0,0,0.3);
