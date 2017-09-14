@@ -102,6 +102,10 @@
   cursor: pointer;
   display: none;
 }
+#loop .icon-mulu{
+  position: relative;
+  top:-2px;
+}
 #loop>.active,
 #pause>.active{
   display: block;
@@ -111,23 +115,18 @@
   justify-content: center;
   align-items: center;
   height: 40px;
-  /* border: 1px dotted red; */
 }
 #pause>span{
   font-size: 25px;
   width: 30px;
   height: 30px;
-  /* color: #eee; */
   cursor: pointer;
   display: none;
 }
-/* .play{
-  display: none;
+#pause .play{
+  position: relative;
+  top:-2px;
 }
-.pause{
-  display: block;
-} */
-
 
 
 
