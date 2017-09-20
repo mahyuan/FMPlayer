@@ -1,6 +1,4 @@
-
-
-
+/*
 var Music = function(){
 	this.init()
 	this.bind()
@@ -107,3 +105,4 @@ proto.addEvent = function (node, type, handler) {
 
 }
 new Music(document.querySelector('.container'))
+*/

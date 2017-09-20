@@ -382,6 +382,7 @@ proto.onplay = function(){
 		console.log("percent+percent")
 		that.getSong();
 		console.log('getsong?')
+		
 	}
 }
 
