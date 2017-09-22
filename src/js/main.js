@@ -3,6 +3,7 @@ let Music = function(){
 	this.init()
 	this.bind()
 	this.getChannels()
+	this.resize()
 	// this.onplay()
 }
 let proto =  Music.prototype
@@ -382,10 +383,14 @@ proto.onplay = function(){
 		console.log("percent+percent")
 		that.getSong();
 		console.log('getsong?')
-		
+
 	}
 }
-
+proto.resize = function(){
+	var cH = window.screen.height
+	// var ch = document.querySelector('.container')
+	this.container.style.height= cH +'px'
+}
 proto.onpause = function(){
 	console.log('pause')
 	clearInterval(timer)
