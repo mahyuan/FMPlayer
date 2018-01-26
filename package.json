@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/mhy-web/FMPlayer/issues"
   },
-  "homepage": "https://github.com/mhy-web/FMPlayer#readme"
+  "homepage": "https://github.com/mhy-web/FMPlayer#readme",
+  "dependencies": {
+    "jquery": "^3.3.1",
+    "vue": "^2.5.13"
+  }
 }
