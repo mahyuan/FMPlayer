@@ -136,7 +136,7 @@ proto.bind = function(){
 		if(that.playing == true){
 			that.music.pause()
 			that.playing = false
-			console.log("that.playing == true"+ that.playing)
+			// console.log("that.playing == true"+ that.playing)
 			that.pauseIcon.classList.add('active')
 			that.playIcon.classList.remove('active')
 			that.imgCt.classList.remove('img-rotate')
@@ -207,9 +207,9 @@ proto.bind = function(){
 	})
 	this.addEvent(this.volumeBar, 'click', function(e){
 		e.stopPropagation();
-		console.log("percent :")
+		// console.log("percent :")
 		let percent = 1 - (e.offsetY/parseInt(getComputedStyle(this).height))
-		console.log(percent)
+		// console.log(percent)
 		that.music.volume = percent
 		that.volumeBox.style.height = percent*100+"%"
 	})
@@ -226,7 +226,7 @@ proto.getSong = function(){
 		}
 	}).done(function(song){
 		let ret = song.song[0]
-		console.log(ret)
+		// console.log(ret)
 		let songURL = ret.url
 		let songTitle = ret.title
 		let songArtist = ret.artist
@@ -251,7 +251,7 @@ proto.getChannels = function(){
 		method: 'get',
 		dataType: 'json'
 	}).done(function(response){
-		console.log(response)
+		// console.log(response)
 		let channels = response.channels
 		that.renderChanels(channels)
 		that.getSong(channels[0])
@@ -322,13 +322,18 @@ proto.songRender = function(title, artist, lyric){
 proto.progressRender = function (){
 	var that = this
 	let curTime = parseInt(this.music.currentTime)
-	let mDuration = parseInt(this.music.duration)
+	let mDuration = parseInt(this.music.duration) || '00:00'
 	let currentTime = parseInt(this.music.currentTime);
 
 	let percent = (currentTime/mDuration)*100+'%'
 
 	this.barNode.style.width = percent
-	let minute = "00"
+	let minutes = parseInt(curTime/60%60) || 0
+	let seconds = parseInt(curTime%60)
+
+	minutes = (minutes <10 ? '0' : '') + minutes
+	seconds = (seconds <10 ? '0' : '') + seconds
+	/*
 	if(curTime<10){
 		curTime = "0" + curTime
 	}
@@ -340,8 +345,11 @@ proto.progressRender = function (){
 		if(curTime<10){
 			curTime = "0" + curTime
 		}
-	}
-	this.curTimeCt.innerHTML = minute + ':' + curTime
+	}*/
+
+	// console.log()
+// console.log(minutes, seconds)
+	this.curTimeCt.innerHTML = `${minutes}:${seconds} `
 
 	// let minutes = parseInt(this.music.currentTime/60)
 	// let seconds = parseInt(this.music.currentTime%60)+''
@@ -379,10 +387,10 @@ proto.onplay = function(){
 		that.updateProgress()
 	}, 1000)
 	if( this.loop == true && percent == 1){  //自动切歌
-		console.log('loop:'+ this.loop)
-		console.log("percent+percent")
+		// console.log('loop:'+ this.loop)
+		// console.log("percent+percent")
 		that.getSong();
-		console.log('getsong?')
+		// console.log('getsong?')
 
 	}
 }
@@ -392,7 +400,7 @@ proto.resize = function(){
 	this.container.style.height= cH +'px'
 }
 proto.onpause = function(){
-	console.log('pause')
+	// console.log('pause')
 	clearInterval(timer)
 }
 new Music(document.querySelector('.container'))
