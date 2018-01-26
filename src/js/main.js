@@ -328,56 +328,26 @@ proto.progressRender = function (){
 	let percent = (currentTime/mDuration)*100+'%'
 
 	this.barNode.style.width = percent
-	let minutes = parseInt(curTime/60%60) || 0
+	let minutes = parseInt(curTime/60) || 0
 	let seconds = parseInt(curTime%60)
 
 	minutes = (minutes <10 ? '0' : '') + minutes
 	seconds = (seconds <10 ? '0' : '') + seconds
-	/*
-	if(curTime<10){
-		curTime = "0" + curTime
-	}
-	if(curTime>60){
-		minute = parseInt(curTime%60)
-		if(minute<10){
-			minute = "0" + minute
-		}
-		if(curTime<10){
-			curTime = "0" + curTime
-		}
-	}*/
 
-	// console.log()
-// console.log(minutes, seconds)
-	this.curTimeCt.innerHTML = `${minutes}:${seconds} `
-
-	// let minutes = parseInt(this.music.currentTime/60)
-	// let seconds = parseInt(this.music.currentTime%60)+''
-	// seconds = seconds.length == 2? seconds : '0'+seconds
-	// this.maxTimeCt.innerHTML = minutes+ ':' +seconds
+	this.curTimeCt.innerHTML = `${minutes}:${seconds}`
 
 }
 
 proto.timeRender = function(){
 
+	let mDuration = parseInt(this.music.duration) || 0
+	let minutes = parseInt(mDuration/60)
+	let seconds = parseInt(mDuration%60)
 
-	let mDuration = parseInt(this.music.duration)
-	let minute = "00"
-
-	if(mDuration < 10){
-		mDuration = "0" + mDuration
-	}
-	if(mDuration>60){
-		minute = parseInt(mDuration/60)
-		mDuration = parseInt(mDuration%60)
-		if(minute<10){
-			minute = "0" + minute
-		}
-		if(mDuration<10){
-			mDuration = "0" + mDuration
-		}
-	}
-	this.maxTimeCt.innerHTML = minute+ ':' + mDuration
+	minutes = (minutes < 10 ? '0' : '') + minutes
+	seconds = (seconds < 10 ? '0' : '') + seconds
+ 	
+	this.maxTimeCt.innerHTML = `${minutes}:${seconds}`
 }
 
 proto.onplay = function(){
@@ -387,10 +357,8 @@ proto.onplay = function(){
 		that.updateProgress()
 	}, 1000)
 	if( this.loop == true && percent == 1){  //自动切歌
-		// console.log('loop:'+ this.loop)
-		// console.log("percent+percent")
+		
 		that.getSong();
-		// console.log('getsong?')
 
 	}
 }
