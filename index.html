@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="referrer" content="never">
+	<link rel="stylesheet" href="./src/css/layout.css">
+	<link rel="stylesheet" href="./src/css/incnfont/icon.css">
+	<title>音乐播放器</title>
+</head>
+<body>
+	<div class="container">
+		<header>
+			<audio src = "" autoplay="autoplay"  controls></audio>
+			<span class="user" id="loginbtn">
+				<a href="https://github.com/mhy-web/FMPlayer" target="_blank" >
+					<img id="avatar" src="./src/images/t5.jpg" alt="user">
+				</a>
+			</span>
+			<span id="logo">My FMPlayer</span>
+		</header>
+		<main>
+			<section id="part1">
+				<figure id="img-ct">
+					<a class="img-ct" href="">
+						<img id="img-show" src="./src/images/t3.jpg" alt="">
+					</a>
+				</figure>
+				<figure class="info-ct">
+					<h3 class="info-title">泡沫</h3>
+					<p class="info-artist">许巍</p>
+					<div class="lyrcCt">
+						<!-- <p class="lyric">
+
+						</p> -->
+					</div>
+				</figure>
+				<figure id="play-ct">
+					<div class="extra-btn-ct">
+						<!-- <span id="thumb-btn"  class="iconfont extra-btn">&#xe612;</span>
+						<span id="collect-btn" class="iconfont extra-btn collected">&#xe72d;</span>
+						<span id="load-btn"  class="iconfont extra-btn">&#xe63b;</span>
+						<span id="review-btn"  class="iconfont extra-btn">&#xe647;</span> -->
+						<!-- <span class="volume iconfont icon-vol">&#xe604;
+							<div class="volume-pro">
+								<div class="volume-box-ct">
+									<p class="volume-box"></p>
+								</div>
+								<div class="volume-bar"></div>
+							</div>
+						</span> -->
+					</div>
+					<div id="perc">
+						<span class="curtime">00:00</span>
+						<div class="progress">
+							<div class="bar">
+								<div class="progress-now"></div>
+							</div>
+							<div class="progress-bar"></div>
+						</div>
+
+						<span class="maxTime">00:00</span>
+					</div>
+					<div class="play-wrap">
+						<span class="volume iconfont icon-vol">&#xe604;
+							<div class="volume-pro">
+								<div class="volume-box-ct">
+									<p class="volume-box"></p>
+								</div>
+								<div class="volume-bar"></div>
+							</div>
+						</span>
+						<!-- <span id="loop" class="iconf ont">
+							<span class="icon-mulu iconfont">&#xe615;</span>
+							<span class="icon-single active iconfont">&#xe606;</span>
+						</span> -->
+						<span id="preplay" class="iconfont">&#xe650;</span>
+						<span id="pause" class="iconf ont">
+							<span class="play iconfont">&#xe62f;</span>
+							<span class="pause active iconfont">&#xe618;</span>
+						</span>
+						<span id="nextplay" class="iconfont">&#xe617;</span>
+						<span id="listshow" class="iconfont">&#xe640;</span>
+					</div>
+				</figure>
+			</section>
+			<aside class="loginCt">
+				<ul class="panel-ct">
+					<!-- 用户页面 -->
+					<!-- <li></li> -->
+				</ul>
+			</aside>
+			<aside class="musicList">
+				<ul class="songCt">
+
+				</ul>
+			</aside>
+		</main>
+	</div>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="./src/js/main.js"></script>
+</body>
+</html>
+

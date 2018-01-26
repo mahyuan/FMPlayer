@@ -1,0 +1,513 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-sizing: border-box;
+}
+audio{
+	display: none;
+}
+html{
+	font-size: 12px;
+}
+.clearfix::after{
+	content: '';
+	display: inline-block;
+	clear: both;
+}
+body{
+	position: relative;
+}
+.container{
+	position: relative;
+	/* display: flex;
+	flex-direction: column;
+	flex-wrap:wrap;
+	justify-content: flex-start	;
+	align-items: stretch;
+	box-sizing: border-box; */
+	/* width: 414px; */
+	/* height:100%; */
+	min-height:736px;
+	margin:auto;
+	box-shadow: 0 0 1rem rgba(102, 89, 89, 0.4), -0.3rem -0.3rem 1rem rgba(102, 89, 89, 0.4);
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+header{
+	position: relative;
+	/* background-color:#00A8A1; */
+	background: linear-gradient(135deg, #2a2626, #473939 50%, #151567);
+	width:100%;
+	height:10%;
+	padding:0 15px;
+	margin:0;
+	display: flex;
+	justify-content: space-between;
+	flex-flow: row nowrap;
+	align-items: center;
+	box-sizing: border-box;
+}
+main{
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height:90%;
+}
+#part1{
+	position: relative;
+	width: 100%;
+	height:100%;
+	/* min-height: 656px; */
+	/* min-height: 888px; */
+	margin: 0;
+	padding-top:10px;
+	padding-left:10px;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	flex-direction: column;
+	align-items: center;
+	/* border-radius: 0 0 1.5rem 1.5rem; */
+	background: linear-gradient(135deg, #2a2626, #473939 50%, #151567);
+}
+header>span{
+	display: inline-block;
+	box-sizing: border-box;
+}
+.user{
+  	display: block;
+	cursor: pointer;
+	height:60px;
+	width: 60px;
+}
+#avatar{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	border: 1px solid rgb(73, 59, 59);
+}
+
+#logo{
+	font-family:"CommercialScript BT","STKaiti","lobster", "ParkAvenue BT", "微软雅黑";
+	font-weight: bold;
+	font-size: 25px;
+	color: red;
+	text-align: right;
+	display: inline-block;
+	line-height:60px;
+	height: 60px;
+	width: 60%;
+	padding-right: 15px;
+	margin-left: 1rem;
+
+}
+@keyframes listmovetest{
+	0%{
+		left:100px;
+	}
+	50%{
+		left: -3100px;
+	}
+	100%{
+		left: 0100px;
+	}
+}
+
+.volume{
+	position: relative;
+}
+.volume-pro{
+	position: absolute;
+	bottom: 25px;
+	left: 50%;
+	display: none;
+	width:0	;
+	height: 200px;
+}
+.volume-box-ct{
+	height: 200px;
+	width:10px;
+	background: #5c8a5c;
+	border-radius: 2.5px;
+	position: relative;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	box-shadow: 1px 1px 1px rgba(71, 81, 68, 0.6), -1px -1px 1px rgba(73, 134, 73, 0.6);
+	display: block;
+}
+.volume-bar{
+	height: 200px;
+	width:10px;
+	background: rgba(253, 238, 238, 0.1);
+	border-radius: 2.5px;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	box-shadow: 1px 1px 1px rgba(71, 81, 68, 0.6), -1px -1px 1px rgba(73, 134, 73, 0.6);
+	display: block;
+	cursor: pointer;
+
+}
+.vol-active{
+	display: block;
+}
+.volume-box{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 10px;
+	height: 100px;
+	border-radius: 5px;
+	background:#a8a6b6;
+	box-shadow: 1px 1px 1px rgba(71, 81, 68, 0.6), -1px -1px 1px rgba(73, 134, 73, 0.6);
+}
+
+.info-ct{
+	height: 150px;
+	width: 80%;
+	/* border:1px dashed red; */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.info-title{
+	color:#fdff;
+	font-size:22px;
+}
+.info-artist{
+	color:#fdff;
+	font-size:20px;
+}
+.lyricCt{
+	width: 100%;
+	height: 50px;
+	font-size: 1.5rem;
+	padding: auto 0;
+	overflow: hidden;
+	text-align: center;
+	font-weight: bold;
+	display: inline-block;
+	color: #1261D2;
+	text-align: center;
+}
+.lyric{
+	font-size: 20px;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+#img-ct{
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+.img-ct{
+	position: absolute;
+	top: 0;
+	left:0;
+	height: 200px;
+	width: 200px;
+	padding:0 auto;
+	border:10px solid #5a4747;
+	box-shadow: 1px 1px 1px rgba(145, 145, 175, 0.8), -1px -1px 1px rgba(145, 145, 175, 0.8);
+	border-radius: 50%
+}
+#img-show{
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+}
+.img-rotate{
+	animation: img-r 10s linear infinite;
+}
+
+@keyframes img-r{
+	0%{
+		transform: rotateZ(0deg);
+	}
+	100%{
+		transform: rotateZ(360deg);
+	}
+}
+
+#play-ct{
+	width: 65%;
+	height: 140px;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.extra-btn-ct{
+	width: 100%;
+}
+#perc{
+	min-width: 80%;
+	margin:5px 10px;;
+	position: relative;
+	font-size: 4px;
+	/* display: flex;
+	justify-content: space-between;
+	align-items: center; */
+}
+.curtime{
+	position: absolute;
+	left:-35px;
+	top:-4px;
+	color: #00A8A1;
+	font-size: 10px;
+	height:	20px;
+}
+.maxTime{
+	position: absolute;
+	right:-35px;
+	top:-4px;
+	color: #1161D2;
+	font-size: 10px;
+	height:	20px;
+}
+
+.progress {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	background: #5c7895;
+	border: 1px dashed #5c7895;
+	border-radius: 3px;
+}
+
+.bar {
+	position: relative;
+	background: rgba(77, 192, 80, 0.90);
+	height: 5px;
+	vertical-align: 2px;
+	border-radius: 3px;
+	cursor: pointer;
+	z-index: initial;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.progress-now{
+	display: block;
+	height: 5px;
+	margin: 0;
+	background: rgba(77, 192, 80, 0.90);
+}
+.progress-bar{
+	display: block;
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 5px;
+	margin: 0;
+	background: rgba(206, 219, 206, 0.1);
+	cursor: pointer;
+}
+.play-wrap{
+	height: 3rem;
+	width: 100%;
+}
+
+.loginCt{
+	position: absolute;
+	left:-62%;
+	top	: 0px;
+	bottom: 0px;
+	display: block;
+	transition: all 0.3s;
+	width: 60%;
+	border-radius: .5rem;
+	z-index: 2;
+	background-color: rgba(15, 87, 119, 0.90);
+	box-shadow: 2px 3px 7px rgba(17, 71, 179, 0.8);
+}
+.panel-ct{
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	padding: 5px;
+
+}
+.panel-ct>li,
+.songCt>li{
+	margin:5px 15px;
+	font-size:1.4rem;
+	font-weight: bold;
+	line-height:2.5rem;
+	border-bottom: 1px dashed #669363;
+	text-align: left;
+	display: block;
+	color: #fff;
+	cursor: pointer;
+}
+.musicList{
+	position: absolute;
+	bottom: -62%;
+	right: 0px;
+	left:0px;
+	height: 40%;
+	z-index: 2;
+	display: block;
+	transition: all 0.3s;
+	box-shadow: -2px -3px 7px rgba(14, 15, 45, 0.8);;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: .5rem;
+	border-bottom-left-radius: 1.5rem;
+	border-bottom-right-radius: 1.5rem;
+}
+.songCt{
+	height:100%;
+	width: 100%;
+	padding:5px;
+	overflow: auto;
+	color: #fff;
+	background:rgba(3, 74, 104, 0.90);
+}
+
+@media (max-width:380px){
+	.container{
+		width: 370px;
+		min-height:667px;
+	}
+	header{
+		height: 80px;
+		border-radius: 0;
+	}
+	.user{
+		height:40px;
+	}
+
+	#avatar{
+		width: 40px;
+		height: 40px;
+	}
+	#logo{
+		font-size: 2.5rem;
+	}
+
+	#img-ct{
+		width: 190px;
+		height:190px;
+	}
+	.img-ct{
+		width: 190px;
+		height:190px;
+	}
+	#img-show{
+		width: 170px;
+		height:170px;
+	}
+	#play-ct{
+		width: 80%;
+		height: 130px;
+	}
+	.icon-vol{
+		font-size:2.8rem;
+
+	}
+	#part1{
+		min-height: 586px;
+		padding-top:15px;
+		padding-left:10px;
+		padding-right: 10px;
+		padding-bottom: 20px;
+		border-radius: 0;
+	}
+	.info-ct{
+		height: 130px;
+	}
+	.lyricCt{
+		height: 40;
+	}
+	.lyric{
+		font-size: 18px;
+	}
+	.info-title{
+		font-size:20px;
+	}
+	.info-artist{
+		font-size:18px;
+	}
+}
+@media (max-width: 320px) {
+	.container{
+		width: 320px;
+		min-height: 568px;
+	}
+	header{
+		height: 70px;
+	}
+	#img-ct{
+		width: 180px;
+		height:180px;
+	}
+	.img-ct{
+		width: 180px;
+		height:180px;
+	}
+	#img-show{
+		width: 160px;
+		height:160px;
+	}
+
+	#play-ct{
+		width: 80%;
+		height: 120px;
+	}
+	#part1{
+		min-height: 498px;
+	}
+	.info-ct{
+		height: 110px;
+	}
+	.lyricCt{
+		height: 35px;
+	}
+	.lyric{
+		font-size: 16px;
+	}
+	.info-title{
+		font-size:18px;
+	}
+	.info-artist{
+		font-size:16px;
+	}
+}
+
+
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+	width:8px;
+}
+
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset006pxrgba(0,0,0,0.3);
+	border-radius:5px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+	border-radius:5px;
+	background:rgba(212, 194, 194, 0.90);
+	-webkit-box-shadow:inset006pxrgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background:rgba(74, 84, 75, 0.40);
+}
