@@ -336,11 +336,6 @@ proto.progressRender = function (){
 
 	this.curTimeCt.innerHTML = `${minutes}:${seconds}`
 
-	// let minutes = parseInt(this.music.currentTime/60)
-	// let seconds = parseInt(this.music.currentTime%60)+''
-	// seconds = seconds.length == 2? seconds : '0'+seconds
-	// this.maxTimeCt.innerHTML = minutes+ ':' +seconds
-
 }
 
 proto.timeRender = function(){
@@ -362,10 +357,8 @@ proto.onplay = function(){
 		that.updateProgress()
 	}, 1000)
 	if( this.loop == true && percent == 1){  //自动切歌
-		// console.log('loop:'+ this.loop)
-		// console.log("percent+percent")
+		
 		that.getSong();
-		// console.log('getsong?')
 
 	}
 }
