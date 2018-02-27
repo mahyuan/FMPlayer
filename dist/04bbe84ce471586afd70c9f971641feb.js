@@ -1,5 +1,3 @@
-"use strict";
-
 // modules are defined as an array
 // [ module function, map of requires ]
 //
@@ -8,17 +6,7 @@
 // anything defined in a previous bundle is accessed via the
 // orig method which is the require for previous bundles
 
-require = function (_require) {
-  function require(_x, _x2, _x3) {
-    return _require.apply(this, arguments);
-  }
-
-  require.toString = function () {
-    return _require.toString();
-  };
-
-  return require;
-}(function (modules, cache, entry) {
+require = (function (modules, cache, entry) {
   // Save the require from previous bundle to this closure if any
   var previousRequire = typeof require === "function" && require;
 
@@ -45,21 +33,21 @@ require = function (_require) {
         err.code = 'MODULE_NOT_FOUND';
         throw err;
       }
-
+      
       localRequire.resolve = resolve;
 
-      var module = cache[name] = new newRequire.Module();
+      var module = cache[name] = new newRequire.Module;
 
       modules[name][0].call(module.exports, localRequire, module, module.exports);
     }
 
     return cache[name].exports;
 
-    function localRequire(x) {
+    function localRequire(x){
       return newRequire(localRequire.resolve(x));
     }
 
-    function resolve(x) {
+    function resolve(x){
       return modules[name][1][x] || x;
     }
   }
@@ -80,7 +68,7 @@ require = function (_require) {
 
   // Override the current require with this new one
   return newRequire;
-});({5:[function(require,module,exports) {
+})({11:[function(require,module,exports) {
 
 let Music = function(){
 	this.init()
@@ -457,17 +445,15 @@ proto.onpause = function(){
 new Music(document.querySelector('.container'))
 
 },{}],0:[function(require,module,exports) {
-'use strict';
-
 var global = (1, eval)('this');
 var OldModule = module.bundle.Module;
 function Module() {
   OldModule.call(this);
   this.hot = {
-    accept: function accept(fn) {
+    accept: function (fn) {
       this._acceptCallback = fn || function () {};
     },
-    dispose: function dispose(fn) {
+    dispose: function (fn) {
       this._disposeCallback = fn;
     }
   };
@@ -476,8 +462,8 @@ function Module() {
 module.bundle.Module = Module;
 
 if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
-  var ws = new WebSocket('ws://localhost:63901/');
-  ws.onmessage = function (event) {
+  var ws = new WebSocket('ws://localhost:55511/');
+  ws.onmessage = function(event) {
     var data = JSON.parse(event.data);
 
     if (data.type === 'update') {
@@ -496,7 +482,7 @@ if (!module.bundle.parent && typeof WebSocket !== 'undefined') {
       ws.close();
       ws.onclose = function () {
         window.location.reload();
-      };
+      }
     }
 
     if (data.type === 'error-resolved') {
@@ -521,7 +507,7 @@ function getParents(bundle, id) {
   for (k in modules) {
     for (d in modules[k][1]) {
       dep = modules[k][1][d];
-      if (dep === id || Array.isArray(dep) && dep[dep.length - 1] === id) {
+      if (dep === id || (Array.isArray(dep) && dep[dep.length - 1] === id)) {
         parents.push(+k);
       }
     }
@@ -574,7 +560,7 @@ function hmrAccept(bundle, id) {
   }
 
   return getParents(global.require, id).some(function (id) {
-    return hmrAccept(global.require, id);
+    return hmrAccept(global.require, id)
   });
 }
-},{}]},{},[0,5])
+},{}]},{},[0,11])
