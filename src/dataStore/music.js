@@ -1,5 +1,5 @@
 import axios from 'axios'
-const URL = 'http://localhost:3000'
+let URL = 'http://localhost:3000'
 
 //排行榜榜单
 export function getToplistDetail() {
@@ -9,7 +9,7 @@ export function getToplistDetail() {
 
 //排行榜详情
 export function topList(idx) {
-	const url = URL + '/top/list'
+	let url = URL + '/top/list'
 	return axios.get(url, {
 		params: {
 			idx
@@ -18,7 +18,7 @@ export function topList(idx) {
 }
 // 搜索
 export function search(keywords) {
-	const url = URL + '/search'
+	let url = URL + '/search'
 	return axios.get(url, {
 		params: {
 			keywords
@@ -39,7 +39,7 @@ export function getTopArtists( offset = 0, limit = 50 ) {
 
 // 获取歌单详情
 export function getPlaylistdetail(id) {
-	const url = URL + '/playlist/detail'
+	let url = URL + '/playlist/detail'
 	return axios.get(url, {
 		params: {
 			id: id
@@ -49,7 +49,7 @@ export function getPlaylistdetail(id) {
 
 //获取歌曲详情
 export function getMusicDetail(id) {
-	const url = URL + '/song/detail'
+	let url = URL + '/song/detail'
 	return axios.get(url, {
 		params: {
 			id: id
@@ -60,7 +60,7 @@ export function getMusicDetail(id) {
 
 //获取音乐地址
 export function getMusicUrl(id) {
-    const url = URL+'/music/url';
+    let url = URL+'/music/url';
     return axios.get(url, {
         params: {
             id: id
@@ -70,7 +70,7 @@ export function getMusicUrl(id) {
 
 //获取歌词
 export function getLyric(id) {
-    const url = URL+'/lyric';
+    let url = URL+'/lyric';
     return axios.get(url, {
         params: {
             id: id
@@ -80,7 +80,7 @@ export function getLyric(id) {
 
 //下载
 export function download(id,name) {
-    const url = URL+'/download';
+    let url = URL+'/download';
     return axios.get(url, {
         params: {
             id: id,

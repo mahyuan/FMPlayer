@@ -1,35 +1,26 @@
 <template>
 	<div id="app">
-		<div>click</div>
-		<router-view/>
+		<Main></Main>
 	</div>
-
 </template>
 
 <script>
-	import {mapGetter, mapMutations} from 'vuex'
-	import {getToplistDetail} from './dataStore/music'
-	
+
 	export default {
-		name: 'app',
-		components: {musicList},
-		methods: {
-
-		},
-		created() {
-			// getmusic() {
-			// 	console.log(getToplistDetail)
-			// 	return this.getToplistDetail
-			// }
-		},
-		computed: {
-			...mapGetter([
-			])
-		},
-
+		name: 'app'
 	}
+
 </script>
 
-<style>
-	
+<style lang="stylus">
+#app 
+	font-family: 'Avenir', Helvetica, Arial, sans-serif
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+	color: #2c3e50
+	width: 100%
+	height: 100%
+	.wrap
+		width: 100%
+		color: red
 </style>
