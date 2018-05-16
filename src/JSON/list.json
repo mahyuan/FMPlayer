@@ -1,0 +1,1646 @@
+{
+    "code": 200, 
+    "list": [
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "哑巴", 
+                    "second": "薛之谦"
+                }, 
+                {
+                    "first": "因风守梦", 
+                    "second": "双笙"
+                }, 
+                {
+                    "first": "庸人自扰", 
+                    "second": "王理文"
+                }
+            ], 
+            "trackUpdateTime": 1526290524972, 
+            "trackCount": 100, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526258556789, 
+            "commentThreadId": "A_PL_0_19723756", 
+            "userId": 1, 
+            "coverImgId": 18696095720518496, 
+            "createTime": 1404115136883, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 1007431744, 
+            "coverImgUrl": "http://p1.music.126.net/DrRIg6CrgDfVLEph9SNh7w==/18696095720518497.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526258555404, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 922822, 
+            "description": "云音乐中每天热度上升最快的100首单曲，每日更新。", 
+            "ordered": true, 
+            "tags": [ ], 
+            "status": 0, 
+            "name": "云音乐飙升榜", 
+            "id": 19723756, 
+            "coverImgId_str": "18696095720518497", 
+            "ToplistType": "S", 
+            "updateFrequency": "每天更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "哑巴", 
+                    "second": "薛之谦"
+                }, 
+                {
+                    "first": "纸短情长", 
+                    "second": "花粥"
+                }, 
+                {
+                    "first": "后来的我们", 
+                    "second": "五月天"
+                }
+            ], 
+            "trackUpdateTime": 1526291148059, 
+            "trackCount": 100, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526258747719, 
+            "commentThreadId": "A_PL_0_3779629", 
+            "userId": 1, 
+            "coverImgId": 18713687906568050, 
+            "createTime": 1378721398225, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 679385536, 
+            "coverImgUrl": "http://p1.music.126.net/N2HO5xfYEqyQ8q6oxCw8IQ==/18713687906568048.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526258747552, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 756462, 
+            "description": "云音乐新歌榜：云音乐用户一周内收听所有新歌（一月内最新发行） 官方TOP排行榜，每天更新。", 
+            "ordered": true, 
+            "tags": [ ], 
+            "status": 0, 
+            "name": "云音乐新歌榜", 
+            "id": 3779629, 
+            "coverImgId_str": "18713687906568048", 
+            "ToplistType": "N", 
+            "updateFrequency": "每天更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "双子", 
+                    "second": "徐秉龙"
+                }, 
+                {
+                    "first": "雨巷", 
+                    "second": "崔开潮"
+                }, 
+                {
+                    "first": "光尘", 
+                    "second": "Hello Nico"
+                }
+            ], 
+            "trackUpdateTime": 1526264889244, 
+            "trackCount": 100, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1525887489118, 
+            "commentThreadId": "A_PL_0_2884035", 
+            "userId": 201586, 
+            "coverImgId": 18740076185638788, 
+            "createTime": 1374732325894, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 166604416, 
+            "coverImgUrl": "http://p1.music.126.net/sBzD11nforcuh1jdLSgX7g==/18740076185638788.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1525887472532, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 245638, 
+            "description": "云音乐独立原创音乐人作品官方榜单，以推荐优秀原创作品为目的。每周四网易云音乐首发。申请网易音乐人：http://music.163.com/nmusician/", 
+            "ordered": true, 
+            "tags": [ ], 
+            "status": 0, 
+            "name": "网易原创歌曲榜", 
+            "id": 2884035, 
+            "coverImgId_str": "18740076185638788", 
+            "ToplistType": "O", 
+            "updateFrequency": "每周四更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "纸短情长（完整版）", 
+                    "second": "烟把儿"
+                }, 
+                {
+                    "first": "戒烟", 
+                    "second": "李荣浩"
+                }, 
+                {
+                    "first": "后来的我们", 
+                    "second": "五月天"
+                }
+            ], 
+            "trackUpdateTime": 1526288409713, 
+            "trackCount": 199, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1525917604157, 
+            "commentThreadId": "A_PL_0_3778678", 
+            "userId": 1, 
+            "coverImgId": 18708190348409092, 
+            "createTime": 1378721406014, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 1919698176, 
+            "coverImgUrl": "http://p1.music.126.net/GhhuF6Ep5Tq9IEvLsyCN7w==/18708190348409091.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1525917603874, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 2754505, 
+            "description": "云音乐热歌榜：云音乐用户一周内收听所有线上歌曲 官方TOP排行榜，每周四更新。", 
+            "ordered": true, 
+            "tags": [ ], 
+            "status": 0, 
+            "name": "云音乐热歌榜", 
+            "id": 3778678, 
+            "coverImgId_str": "18708190348409091", 
+            "ToplistType": "H", 
+            "updateFrequency": "每周四更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "#Lov3 #Ngẫu Hứng", 
+                    "second": "Hoaprox"
+                }, 
+                {
+                    "first": "Take Me To Infinity", 
+                    "second": "Consoul Trainin"
+                }, 
+                {
+                    "first": "Wild", 
+                    "second": "Monogem"
+                }
+            ], 
+            "trackUpdateTime": 1526011201731, 
+            "trackCount": 50, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526011201719, 
+            "commentThreadId": "A_PL_0_1978921795", 
+            "userId": 1, 
+            "coverImgId": 18822539557941308, 
+            "createTime": 1510825632233, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 29513392, 
+            "coverImgUrl": "http://p1.music.126.net/5tgOCD4jiPKBGt7znJl-2g==/18822539557941307.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526011201612, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 181440, 
+            "description": "云音乐用户一周内收听电子音乐官方TOP排行榜，每周五更新", 
+            "ordered": true, 
+            "tags": [
+                "电子"
+            ], 
+            "status": 0, 
+            "name": "云音乐电音榜", 
+            "id": 1978921795, 
+            "coverImgId_str": "18822539557941307", 
+            "updateFrequency": "每周五更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "BINGBIAN病变（prod.jurrivh）", 
+                    "second": "Cubi/Aydo$/BRGang"
+                }, 
+                {
+                    "first": "几乎成名", 
+                    "second": "Tizzy T"
+                }, 
+                {
+                    "first": "无可替代", 
+                    "second": "Tizzy T"
+                }
+            ], 
+            "trackUpdateTime": 1526231107556, 
+            "trackCount": 50, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526004301730, 
+            "commentThreadId": "A_PL_0_991319590", 
+            "userId": 1, 
+            "coverImgId": 19073228207465344, 
+            "createTime": 1510290389440, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 19795956, 
+            "coverImgUrl": "http://p1.music.126.net/RChr5NydlXafIV1GVEHJdg==/19073228207465342.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526004301651, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 61073, 
+            "description": "云音乐独立说唱音乐人作品官方榜单，以推荐优秀原创说唱作品为目的。每周五网易云音乐首发。申请网易音乐人：http://music.163.com/nmusician/", 
+            "ordered": true, 
+            "tags": [
+                "华语", 
+                "说唱"
+            ], 
+            "status": 0, 
+            "name": "云音乐嘻哈榜", 
+            "id": 991319590, 
+            "coverImgId_str": "19073228207465342", 
+            "updateFrequency": "每周五更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "Two Forks", 
+                    "second": "Squeeze"
+                }, 
+                {
+                    "first": "Old School", 
+                    "second": "Urban Cone"
+                }, 
+                {
+                    "first": "One Kiss", 
+                    "second": "Calvin Harris/Dua Lipa"
+                }
+            ], 
+            "trackUpdateTime": 1526018264842, 
+            "trackCount": 20, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1525834661576, 
+            "commentThreadId": "A_PL_0_2023401535", 
+            "userId": 270539485, 
+            "coverImgId": 109951163089272200, 
+            "createTime": 1513838619821, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 1092332, 
+            "coverImgUrl": "http://p1.music.126.net/0_6_Efe9m0D0NtghOxinUg==/109951163089272193.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1525834661513, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 4332, 
+            "description": "英国权威音乐杂志《Q》中文版&网易云音乐联合呈现榜单TOP20，英国《Q》杂志权威推荐。每周三同步更新。", 
+            "ordered": true, 
+            "tags": [
+                "欧美", 
+                "流行", 
+                "英伦"
+            ], 
+            "status": 0, 
+            "name": "英国Q杂志中文版周榜", 
+            "id": 2023401535, 
+            "coverImgId_str": "109951163089272193", 
+            "updateFrequency": "每周三更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "HALF", 
+                    "second": "女王蜂"
+                }, 
+                {
+                    "first": "HandClap", 
+                    "second": "Fitz & the Tantrums"
+                }, 
+                {
+                    "first": "雅俗共赏", 
+                    "second": "许嵩"
+                }
+            ], 
+            "trackUpdateTime": 1526011201280, 
+            "trackCount": 50, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526011201280, 
+            "commentThreadId": "A_PL_0_2006508653", 
+            "userId": 6790397, 
+            "coverImgId": 109951163078922990, 
+            "createTime": 1512703064327, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 3336410, 
+            "coverImgUrl": "http://p1.music.126.net/CUqQp33MZf_m0BwH4u0V6A==/109951163078922993.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526011201166, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 11905, 
+            "description": "无音乐，不游戏。人气电竞主播联手推荐，最热最潮电竞歌曲榜单，电竞迷们的必备收藏！", 
+            "ordered": true, 
+            "tags": [
+                "游戏"
+            ], 
+            "status": 0, 
+            "name": "电竞音乐榜", 
+            "id": 2006508653, 
+            "coverImgId_str": "109951163078922993", 
+            "updateFrequency": "每周五更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "So funny", 
+                    "second": "Xerls"
+                }, 
+                {
+                    "first": "FAITH ORANGE", 
+                    "second": "OranGe"
+                }, 
+                {
+                    "first": "Bring That Sh!t Back", 
+                    "second": "J.W."
+                }
+            ], 
+            "trackUpdateTime": 1526295960845, 
+            "trackCount": 58, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526047211411, 
+            "commentThreadId": "A_PL_0_10520166", 
+            "userId": 48102, 
+            "coverImgId": 109951163068669680, 
+            "createTime": 1395988377813, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 55516848, 
+            "coverImgUrl": "http://p1.music.126.net/qN-sDLqehN1oHGyov-0EZw==/109951163068669685.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526047211355, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 205809, 
+            "description": "▲▲▲本榜排名按作品发行时间顺序▲▲▲网易云音乐联合加菲众、DJ WENGWENG（灯笼Club）、3ASiC（同步计划）、DJ Senders（沉睡电台）、Eiasn电音厂牌、电悦台（EDM Station） 打造的云音乐“新电力榜”！每周五为大家带来国内外优秀的电子音乐！", 
+            "ordered": true, 
+            "tags": [
+                "电子", 
+                "榜单"
+            ], 
+            "status": 0, 
+            "name": "云音乐新电力榜", 
+            "id": 10520166, 
+            "coverImgId_str": "109951163068669685", 
+            "updateFrequency": "每周五更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "KISS OF DEATH (Produced by HYDE)", 
+                    "second": "中島美嘉"
+                }, 
+                {
+                    "first": "みちしるべ", 
+                    "second": "茅原実里"
+                }, 
+                {
+                    "first": "HALF", 
+                    "second": "女王蜂"
+                }
+            ], 
+            "trackUpdateTime": 1526218636912, 
+            "trackCount": 100, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1525930628405, 
+            "commentThreadId": "A_PL_0_71385702", 
+            "userId": 1, 
+            "coverImgId": 18752170813539664, 
+            "createTime": 1430968935040, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 30072108, 
+            "coverImgUrl": "http://p1.music.126.net/vttjtRjL75Q4DEnjRsO8-A==/18752170813539664.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1525930316030, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 118623, 
+            "description": "云音乐用户一周内收听所有ACG音乐官方TOP排行榜，每周四更新。", 
+            "ordered": true, 
+            "tags": [ ], 
+            "status": 0, 
+            "name": "云音乐ACG音乐榜", 
+            "id": 71385702, 
+            "coverImgId_str": "18752170813539664", 
+            "updateFrequency": "每周四更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "Cello Suite No. 1 in G major (BWV 1007): I. Prelude", 
+                    "second": "Johann Sebastian Bach"
+                }, 
+                {
+                    "first": "Libertango", 
+                    "second": "Yo-Yo Ma"
+                }, 
+                {
+                    "first": "巴赫(G大调第一大提琴组曲)前奏曲", 
+                    "second": "秦立巍"
+                }
+            ], 
+            "trackUpdateTime": 1526284742597, 
+            "trackCount": 100, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1525931930737, 
+            "commentThreadId": "A_PL_0_71384707", 
+            "userId": 1, 
+            "coverImgId": 18681802069355170, 
+            "createTime": 1430968920537, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 19856174, 
+            "coverImgUrl": "http://p1.music.126.net/BzSxoj6O1LQPlFceDn-LKw==/18681802069355169.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1525930756987, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 155570, 
+            "description": "云音乐用户一周内收听所有古典音乐官方TOP排行榜，每周四更新。", 
+            "ordered": true, 
+            "tags": [
+                "古典"
+            ], 
+            "status": 0, 
+            "name": "云音乐古典音乐榜", 
+            "id": 71384707, 
+            "coverImgId_str": "18681802069355169", 
+            "updateFrequency": "每周四更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "One Kiss", 
+                    "second": "Calvin Harris/Dua Lipa"
+                }, 
+                {
+                    "first": "Nice For What", 
+                    "second": "Drake"
+                }, 
+                {
+                    "first": "No Tears Left To Cry", 
+                    "second": "Ariana Grande"
+                }
+            ], 
+            "trackUpdateTime": 1526266200183, 
+            "trackCount": 39, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526266200177, 
+            "commentThreadId": "A_PL_0_180106", 
+            "userId": 48333, 
+            "coverImgId": 18930291695438268, 
+            "createTime": 1361239766844, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 66698592, 
+            "coverImgUrl": "http://p1.music.126.net/VQOMRRix9_omZbg4t-pVpw==/18930291695438269.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526266200088, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 176569, 
+            "description": "UK排行榜", 
+            "ordered": true, 
+            "tags": [
+                "榜单", 
+                "欧美"
+            ], 
+            "status": 0, 
+            "name": "UK排行榜周榜", 
+            "id": 180106, 
+            "coverImgId_str": "18930291695438269", 
+            "updateFrequency": "刚刚更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "Nice For What", 
+                    "second": "Drake"
+                }, 
+                {
+                    "first": "Psycho", 
+                    "second": "Post Malone/Ty Dolla $ign"
+                }, 
+                {
+                    "first": "God's Plan", 
+                    "second": "Drake"
+                }
+            ], 
+            "trackUpdateTime": 1525834302918, 
+            "trackCount": 50, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1525834302843, 
+            "commentThreadId": "A_PL_0_60198", 
+            "userId": 48171, 
+            "coverImgId": 18641120139148116, 
+            "createTime": 1358823076818, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 226447776, 
+            "coverImgUrl": "http://p1.music.126.net/EBRqPmY8k8qyVHyF8AyjdQ==/18641120139148117.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1525834302749, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 707529, 
+            "description": "美国Billboard排行榜", 
+            "ordered": true, 
+            "tags": [
+                "流行", 
+                "欧美", 
+                "榜单"
+            ], 
+            "status": 0, 
+            "name": "美国Billboard周榜", 
+            "id": 60198, 
+            "coverImgId_str": "18641120139148117", 
+            "updateFrequency": "每周三更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "The Lone Brazilian", 
+                    "second": "Flashmob"
+                }, 
+                {
+                    "first": "Pick Up (12\" Extended Disco Version)", 
+                    "second": "DJ Koze"
+                }, 
+                {
+                    "first": "In Arms (Extended Mix)", 
+                    "second": "Ferreck Dawn/Robosonic"
+                }
+            ], 
+            "trackUpdateTime": 1525925327128, 
+            "trackCount": 76, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1525925326743, 
+            "commentThreadId": "A_PL_0_3812895", 
+            "userId": 1589393, 
+            "coverImgId": 18613632348448740, 
+            "createTime": 1378886589466, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 48422096, 
+            "coverImgUrl": "http://p1.music.126.net/A61n94BjWAb-ql4xpwpYcg==/18613632348448741.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1525925326591, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 164437, 
+            "description": "Beatport全球电子舞曲排行榜TOP100（本榜每周四更新）", 
+            "ordered": true, 
+            "tags": [
+                "欧美", 
+                "电子", 
+                "榜单"
+            ], 
+            "status": 0, 
+            "name": "Beatport全球电子舞曲榜", 
+            "id": 3812895, 
+            "coverImgId_str": "18613632348448741", 
+            "updateFrequency": "每周四更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "Zombie", 
+                    "second": "Bad Wolves/Kane Churko"
+                }, 
+                {
+                    "first": "La même", 
+                    "second": "Maître Gims/Vianney"
+                }, 
+                {
+                    "first": "Un peu de rêve", 
+                    "second": "Vitaa"
+                }
+            ], 
+            "trackUpdateTime": 1526048889688, 
+            "trackCount": 20, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526048889631, 
+            "commentThreadId": "A_PL_0_27135204", 
+            "userId": 5190793, 
+            "coverImgId": 109951162873641550, 
+            "createTime": 1409825013948, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 13804722, 
+            "coverImgUrl": "http://p1.music.126.net/6O0ZEnO-I_RADBylVypprg==/109951162873641556.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526048889609, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 41211, 
+            "description": "法国NRJ电台（national Radio de Jeunes）成立于1981年，总部位于法国巴黎。是法国最受欢迎的音乐电台和听众最多的广播电台之一。NRJ音乐奖素有法国的“格莱美”之称。此榜单针对NRJ电台法国本土热门歌曲排行。【每周五更新】", 
+            "ordered": true, 
+            "tags": [
+                "榜单"
+            ], 
+            "status": 0, 
+            "name": "法国 NRJ Vos Hits 周榜", 
+            "id": 27135204, 
+            "coverImgId_str": "109951162873641556", 
+            "updateFrequency": "每周五更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "我的好兄弟", 
+                    "second": "小沈阳/高进"
+                }, 
+                {
+                    "first": "喜欢你", 
+                    "second": "G.E.M.邓紫棋"
+                }, 
+                {
+                    "first": "王妃", 
+                    "second": "萧敬腾"
+                }
+            ], 
+            "trackUpdateTime": 1526046896763, 
+            "trackCount": 20, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526046896755, 
+            "commentThreadId": "A_PL_0_21845217", 
+            "userId": 30728956, 
+            "coverImgId": 19174383276805160, 
+            "createTime": 1405653093230, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 29386628, 
+            "coverImgUrl": "http://p1.music.126.net/H4Y7jxd_zwygcAmPMfwJnQ==/19174383276805159.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526046896698, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 116691, 
+            "description": "KTV唛榜是目前国内首个以全国超过200家KTV点歌平台真实数据的当红歌曲榜单。所涉及的KTV店铺覆盖全国近100多个城市，囊括一、二、三线各级城市及地区。在综合全国各地KTV点唱数据的前提下进行汇总与统计。为了保证信息的及时性，唛榜每周五更新。提供给K迷们最新和最准确的数据。", 
+            "ordered": true, 
+            "tags": [
+                "华语", 
+                "KTV", 
+                "榜单"
+            ], 
+            "status": 0, 
+            "name": "KTV唛榜", 
+            "id": 21845217, 
+            "coverImgId_str": "19174383276805159", 
+            "updateFrequency": "每周五更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "Back to You", 
+                    "second": "Selena Gomez"
+                }, 
+                {
+                    "first": "New Light", 
+                    "second": "John Mayer"
+                }, 
+                {
+                    "first": "Whatever It Takes", 
+                    "second": "Imagine Dragons"
+                }
+            ], 
+            "trackUpdateTime": 1526267952468, 
+            "trackCount": 49, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526267952456, 
+            "commentThreadId": "A_PL_0_11641012", 
+            "userId": 48308, 
+            "coverImgId": 18588343581028560, 
+            "createTime": 1398047444743, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 57570100, 
+            "coverImgUrl": "http://p1.music.126.net/83pU_bx5Cz0NlcTq-P3R3g==/18588343581028558.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526267952369, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 196652, 
+            "description": "iTunes榜Top20~", 
+            "ordered": true, 
+            "tags": [
+                "榜单"
+            ], 
+            "status": 0, 
+            "name": "iTunes榜", 
+            "id": 11641012, 
+            "coverImgId_str": "18588343581028558", 
+            "updateFrequency": "刚刚更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "シンクロニシティ", 
+                    "second": "乃木坂46"
+                }, 
+                {
+                    "first": "Fandango", 
+                    "second": "THE RAMPAGE from EXILE TRIBE"
+                }, 
+                {
+                    "first": "フィクション", 
+                    "second": "sumika"
+                }
+            ], 
+            "trackUpdateTime": 1525785732086, 
+            "trackCount": 39, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1525260111208, 
+            "commentThreadId": "A_PL_0_60131", 
+            "userId": 48160, 
+            "coverImgId": 19029247741938160, 
+            "createTime": 1357635084874, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 24056416, 
+            "coverImgUrl": "http://p1.music.126.net/Rgqbqsf4b3gNOzZKxOMxuw==/19029247741938160.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1525260111125, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 75484, 
+            "description": "ORICONSTYLE CD单曲周榜，每周三更新，欢迎关注。", 
+            "ordered": true, 
+            "tags": [
+                "榜单", 
+                "日语"
+            ], 
+            "status": 0, 
+            "name": "日本Oricon周榜", 
+            "id": 60131, 
+            "coverImgId_str": "19029247741938160", 
+            "updateFrequency": "每周三更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "Done For Me", 
+                    "second": "Charlie Puth/Kehlani"
+                }, 
+                {
+                    "first": "Pray For Me", 
+                    "second": "The Weeknd/Kendrick Lamar"
+                }, 
+                {
+                    "first": "No Tears Left To Cry", 
+                    "second": "Ariana Grande"
+                }
+            ], 
+            "trackUpdateTime": 1526279351485, 
+            "trackCount": 20, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526279351433, 
+            "commentThreadId": "A_PL_0_120001", 
+            "userId": 48337, 
+            "coverImgId": 19187577416338508, 
+            "createTime": 1359703138872, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 17955194, 
+            "coverImgUrl": "http://p1.music.126.net/54vZEZ-fCudWZm6GH7I55w==/19187577416338508.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526279351373, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 78006, 
+            "description": "Hit FM Top 20 Countdown 第36期", 
+            "ordered": true, 
+            "tags": [ ], 
+            "status": 0, 
+            "name": "Hit FM Top榜", 
+            "id": 120001, 
+            "coverImgId_str": "19187577416338508", 
+            "updateFrequency": "刚刚更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "我们", 
+                    "second": "陈奕迅"
+                }, 
+                {
+                    "first": "还好", 
+                    "second": "梁文音"
+                }, 
+                {
+                    "first": "几分之几 (You Complete Me)", 
+                    "second": "卢广仲"
+                }
+            ], 
+            "trackUpdateTime": 1526278643632, 
+            "trackCount": 8, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526278643634, 
+            "commentThreadId": "A_PL_0_112463", 
+            "userId": 48174, 
+            "coverImgId": 18646617697286900, 
+            "createTime": 1359690215675, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 7960371, 
+            "coverImgUrl": "http://p1.music.126.net/wqi4TF4ILiTUUL5T7zhwsQ==/18646617697286899.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526278634578, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 23265, 
+            "description": "資料來源統計： ※唱片行銷售量佔20%(含玫瑰大眾、g-music、五大、佳佳、博客來等各大唱片行) ※數位音樂下載佔30%(含 iTunes、KK box、myMusic、Omusic、各鈴聲下載榜) ※Hit Fm聯播網AIR PLAY電台播出率佔50%", 
+            "ordered": true, 
+            "tags": [
+                "流行"
+            ], 
+            "status": 0, 
+            "name": "台湾Hito排行榜", 
+            "id": 112463, 
+            "coverImgId_str": "18646617697286899", 
+            "updateFrequency": "刚刚更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "最想去的地方", 
+                    "second": "炎亚纶"
+                }, 
+                {
+                    "first": "I'm Sorry", 
+                    "second": "MATZKA"
+                }, 
+                {
+                    "first": "这样的我", 
+                    "second": "郭采洁"
+                }
+            ], 
+            "trackUpdateTime": 1526279783739, 
+            "trackCount": 10, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526279783741, 
+            "commentThreadId": "A_PL_0_112504", 
+            "userId": 48188, 
+            "coverImgId": 18967675090783710, 
+            "createTime": 1359697325722, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 22491516, 
+            "coverImgUrl": "http://p1.music.126.net/JPh-zekmt0sW2Z3TZMsGzA==/18967675090783713.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526279662810, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 73067, 
+            "description": "中国TOP排行榜分成内地榜及港台榜，每周一更新。", 
+            "ordered": true, 
+            "tags": [
+                "流行"
+            ], 
+            "status": 0, 
+            "name": "中国TOP排行榜（港台榜）", 
+            "id": 112504, 
+            "coverImgId_str": "18967675090783713", 
+            "updateFrequency": "刚刚更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "好久不见", 
+                    "second": "苏醒"
+                }, 
+                {
+                    "first": "摩天大楼", 
+                    "second": "薛之谦"
+                }, 
+                {
+                    "first": "夜光", 
+                    "second": "那英"
+                }
+            ], 
+            "trackUpdateTime": 1526264864420, 
+            "trackCount": 9, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526264864415, 
+            "commentThreadId": "A_PL_0_64016", 
+            "userId": 48188, 
+            "coverImgId": 18878614648932972, 
+            "createTime": 1359005319468, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 39382036, 
+            "coverImgUrl": "http://p1.music.126.net/2klOtThpDQ0CMhOy5AOzSg==/18878614648932971.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1526264864361, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 127887, 
+            "description": "中国TOP排行榜分成内地榜及港台榜，每周一更新。", 
+            "ordered": true, 
+            "tags": [
+                "流行", 
+                "榜单", 
+                "清新"
+            ], 
+            "status": 0, 
+            "name": "中国TOP排行榜（内地榜）", 
+            "id": 64016, 
+            "coverImgId_str": "18878614648932971", 
+            "updateFrequency": "刚刚更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "小明少少明 ", 
+                    "second": "TONICK"
+                }, 
+                {
+                    "first": "Yeah", 
+                    "second": "林二汶"
+                }, 
+                {
+                    "first": "理想家", 
+                    "second": "卢冠廷"
+                }
+            ], 
+            "trackUpdateTime": 1526050482237, 
+            "trackCount": 10, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1526050482214, 
+            "commentThreadId": "A_PL_0_10169002", 
+            "userId": 48330, 
+            "coverImgId": 18976471183805916, 
+            "createTime": 1395305562352, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 15346056, 
+            "coverImgUrl": "http://p1.music.126.net/YQsr07nkdkOyZrlAkf0SHA==/18976471183805915.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1524820198362, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 55687, 
+            "description": "", 
+            "ordered": true, 
+            "tags": [
+                "榜单"
+            ], 
+            "status": 0, 
+            "name": "香港电台中文歌曲龙虎榜", 
+            "id": 10169002, 
+            "coverImgId_str": "18976471183805915", 
+            "updateFrequency": "每周五更新"
+        }, 
+        {
+            "subscribers": [ ], 
+            "subscribed": null, 
+            "creator": null, 
+            "artists": null, 
+            "tracks": [
+                {
+                    "first": "Rap soldier(Feat.Lil Andy)", 
+                    "second": "瘦恒SOULHAN"
+                }, 
+                {
+                    "first": "Black Bird", 
+                    "second": "Eddie Beatz/也是福/ChaCha/Alienkey"
+                }, 
+                {
+                    "first": "痛", 
+                    "second": "SMK/周末/一航"
+                }
+            ], 
+            "trackUpdateTime": 1521022325440, 
+            "trackCount": 10, 
+            "specialType": 10, 
+            "newImported": false, 
+            "totalDuration": 0, 
+            "privacy": 0, 
+            "updateTime": 1509073546824, 
+            "commentThreadId": "A_PL_0_1899724", 
+            "userId": 1564341, 
+            "coverImgId": 18922595114302108, 
+            "createTime": 1371442959698, 
+            "anonimous": false, 
+            "highQuality": false, 
+            "playCount": 16412593, 
+            "coverImgUrl": "http://p1.music.126.net/_nwkQTFtOdAjFvOI8Wg7Tg==/18922595114302109.jpg", 
+            "adType": 0, 
+            "trackNumberUpdateTime": 1509073546771, 
+            "cloudTrackCount": 0, 
+            "subscribedCount": 52365, 
+            "description": "中国嘻哈榜：中国最具权威和专业性的 中文说唱原创音乐 排行榜节目，网罗全国最优秀的华语说唱歌曲！只要说唱不死，嘻哈榜不止！ 官博：@中国嘻哈榜 ； 微信公众号：嘻哈融合体 (hiphopfusion2007) 官网：www.hiphop3g.com ；", 
+            "ordered": true, 
+            "tags": [
+                "华语", 
+                "榜单", 
+                "说唱"
+            ], 
+            "status": 0, 
+            "name": "中国嘻哈榜", 
+            "id": 1899724, 
+            "coverImgId_str": "18922595114302109", 
+            "updateFrequency": "每周五更新"
+        }
+    ], 
+    "artistToplist": {
+        "coverUrl": "http://p1.music.126.net/MJdmNzZwTCz0b4IpHJV6Wg==/109951162865487429.jpg", 
+        "artists": [
+            {
+                "first": "薛之谦", 
+                "second": "", 
+                "third": 720619
+            }, 
+            {
+                "first": "陈奕迅", 
+                "second": "", 
+                "third": 658762
+            }, 
+            {
+                "first": "林俊杰", 
+                "second": "", 
+                "third": 607869
+            }
+        ], 
+        "name": "云音乐歌手榜", 
+        "upateFrequency": "每天更新", 
+        "position": 5, 
+        "updateFrequency": "每天更新"
+    }, 
+    "rewardToplist": {
+        "coverUrl": "http://p1.music.126.net/oQAa0mlQw5LKA-Z54IOp3g==/19008357021060580.jpg", 
+        "songs": [
+            {
+                "name": "你不在南京", 
+                "id": 489317472, 
+                "position": 1, 
+                "alias": [ ], 
+                "status": 0, 
+                "fee": 0, 
+                "copyrightId": 29010, 
+                "disc": "", 
+                "no": 1, 
+                "artists": [
+                    {
+                        "name": "南游记乐队", 
+                        "id": 12496616, 
+                        "picId": 0, 
+                        "img1v1Id": 0, 
+                        "briefDesc": "", 
+                        "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "albumSize": 0, 
+                        "alias": [ ], 
+                        "trans": "", 
+                        "musicSize": 0
+                    }
+                ], 
+                "album": {
+                    "name": "南游记", 
+                    "id": 35718442, 
+                    "type": "专辑", 
+                    "size": 3, 
+                    "picId": 109951163023120430, 
+                    "blurPicUrl": "http://p1.music.126.net/NWzryjC7i_rjW-gMYbgUgA==/109951163023120439.jpg", 
+                    "companyId": 0, 
+                    "pic": 109951163023120430, 
+                    "picUrl": "http://p1.music.126.net/NWzryjC7i_rjW-gMYbgUgA==/109951163023120439.jpg", 
+                    "publishTime": 1513526400000, 
+                    "description": "", 
+                    "tags": "", 
+                    "company": "维音唱片", 
+                    "briefDesc": "", 
+                    "artist": {
+                        "name": "", 
+                        "id": 0, 
+                        "picId": 0, 
+                        "img1v1Id": 0, 
+                        "briefDesc": "", 
+                        "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "albumSize": 0, 
+                        "alias": [ ], 
+                        "trans": "", 
+                        "musicSize": 0
+                    }, 
+                    "songs": [ ], 
+                    "alias": [ ], 
+                    "status": 0, 
+                    "copyrightId": 29010, 
+                    "commentThreadId": "R_AL_3_35718442", 
+                    "artists": [
+                        {
+                            "name": "南游记乐队", 
+                            "id": 12496616, 
+                            "picId": 0, 
+                            "img1v1Id": 0, 
+                            "briefDesc": "", 
+                            "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                            "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                            "albumSize": 0, 
+                            "alias": [ ], 
+                            "trans": "", 
+                            "musicSize": 0
+                        }
+                    ], 
+                    "subType": "混音版", 
+                    "picId_str": "109951163023120439"
+                }, 
+                "starred": false, 
+                "popularity": 100, 
+                "score": 100, 
+                "starredNum": 0, 
+                "duration": 326342, 
+                "playedNum": 0, 
+                "dayPlays": 0, 
+                "hearTime": 0, 
+                "ringtone": null, 
+                "crbt": null, 
+                "audition": null, 
+                "copyFrom": "", 
+                "commentThreadId": "R_SO_4_489317472", 
+                "rtUrl": null, 
+                "ftype": 0, 
+                "rtUrls": [ ], 
+                "copyright": 2, 
+                "hMusic": {
+                    "name": "", 
+                    "id": 1330210254, 
+                    "size": 13056044, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 320000, 
+                    "playTime": 326342, 
+                    "volumeDelta": 0
+                }, 
+                "mMusic": {
+                    "name": "", 
+                    "id": 1330210255, 
+                    "size": 7833644, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 192000, 
+                    "playTime": 326342, 
+                    "volumeDelta": 0
+                }, 
+                "lMusic": {
+                    "name": "", 
+                    "id": 1330210256, 
+                    "size": 5222444, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 128000, 
+                    "playTime": 326342, 
+                    "volumeDelta": 0
+                }, 
+                "bMusic": {
+                    "name": "", 
+                    "id": 1330210256, 
+                    "size": 5222444, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 128000, 
+                    "playTime": 326342, 
+                    "volumeDelta": 0
+                }, 
+                "rurl": null, 
+                "mvid": 5678317, 
+                "rtype": 0, 
+                "mp3Url": null
+            }, 
+            {
+                "name": "大理爱情故事（Cover 广东雨神）", 
+                "id": 556442148, 
+                "position": 1, 
+                "alias": [ ], 
+                "status": 0, 
+                "fee": 0, 
+                "copyrightId": 0, 
+                "disc": "", 
+                "no": 1, 
+                "artists": [
+                    {
+                        "name": "韩俊林", 
+                        "id": 12559499, 
+                        "picId": 0, 
+                        "img1v1Id": 0, 
+                        "briefDesc": "", 
+                        "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "albumSize": 0, 
+                        "alias": [ ], 
+                        "trans": "", 
+                        "musicSize": 0
+                    }
+                ], 
+                "album": {
+                    "name": "大理爱情故事", 
+                    "id": 38521308, 
+                    "type": "专辑", 
+                    "size": 1, 
+                    "picId": 109951163274158110, 
+                    "blurPicUrl": "http://p1.music.126.net/LKhKUa0fPOkR78rIfKn9Lw==/109951163274158120.jpg", 
+                    "companyId": 0, 
+                    "pic": 109951163274158110, 
+                    "picUrl": "http://p1.music.126.net/LKhKUa0fPOkR78rIfKn9Lw==/109951163274158120.jpg", 
+                    "publishTime": 1524960000000, 
+                    "description": "", 
+                    "tags": "", 
+                    "company": null, 
+                    "briefDesc": "", 
+                    "artist": {
+                        "name": "", 
+                        "id": 0, 
+                        "picId": 0, 
+                        "img1v1Id": 0, 
+                        "briefDesc": "", 
+                        "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "albumSize": 0, 
+                        "alias": [ ], 
+                        "trans": "", 
+                        "musicSize": 0
+                    }, 
+                    "songs": [ ], 
+                    "alias": [ ], 
+                    "status": 0, 
+                    "copyrightId": 0, 
+                    "commentThreadId": "R_AL_3_38521308", 
+                    "artists": [
+                        {
+                            "name": "韩俊林", 
+                            "id": 12559499, 
+                            "picId": 0, 
+                            "img1v1Id": 0, 
+                            "briefDesc": "", 
+                            "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                            "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                            "albumSize": 0, 
+                            "alias": [ ], 
+                            "trans": "", 
+                            "musicSize": 0
+                        }
+                    ], 
+                    "subType": "现场版", 
+                    "picId_str": "109951163274158120"
+                }, 
+                "starred": false, 
+                "popularity": 20, 
+                "score": 20, 
+                "starredNum": 0, 
+                "duration": 215770, 
+                "playedNum": 0, 
+                "dayPlays": 0, 
+                "hearTime": 0, 
+                "ringtone": null, 
+                "crbt": null, 
+                "audition": null, 
+                "copyFrom": "", 
+                "commentThreadId": "R_SO_4_556442148", 
+                "rtUrl": null, 
+                "ftype": 0, 
+                "rtUrls": [ ], 
+                "copyright": 0, 
+                "hMusic": {
+                    "name": "", 
+                    "id": 1459908368, 
+                    "size": 8632991, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 320000, 
+                    "playTime": 215770, 
+                    "volumeDelta": 0
+                }, 
+                "mMusic": {
+                    "name": "", 
+                    "id": 1459908369, 
+                    "size": 5179812, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 192000, 
+                    "playTime": 215770, 
+                    "volumeDelta": 0
+                }, 
+                "lMusic": {
+                    "name": "", 
+                    "id": 1459908370, 
+                    "size": 3453222, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 128000, 
+                    "playTime": 215770, 
+                    "volumeDelta": 0
+                }, 
+                "bMusic": {
+                    "name": "", 
+                    "id": 1459908370, 
+                    "size": 3453222, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 128000, 
+                    "playTime": 215770, 
+                    "volumeDelta": 0
+                }, 
+                "rurl": null, 
+                "mvid": 0, 
+                "rtype": 0, 
+                "mp3Url": null
+            }, 
+            {
+                "name": "我最爱的那个姑娘", 
+                "id": 560244509, 
+                "position": 1, 
+                "alias": [ ], 
+                "status": 0, 
+                "fee": 0, 
+                "copyrightId": 0, 
+                "disc": "", 
+                "no": 1, 
+                "artists": [
+                    {
+                        "name": "文氓苏", 
+                        "id": 12494318, 
+                        "picId": 0, 
+                        "img1v1Id": 0, 
+                        "briefDesc": "", 
+                        "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "albumSize": 0, 
+                        "alias": [ ], 
+                        "trans": "", 
+                        "musicSize": 0
+                    }
+                ], 
+                "album": {
+                    "name": "文氓苏-母亲节特辑", 
+                    "id": 38644526, 
+                    "type": "专辑", 
+                    "size": 1, 
+                    "picId": 109951163295103500, 
+                    "blurPicUrl": "http://p1.music.126.net/tIsh9NGNaDXy16Auf80_MQ==/109951163295103504.jpg", 
+                    "companyId": 0, 
+                    "pic": 109951163295103500, 
+                    "picUrl": "http://p1.music.126.net/tIsh9NGNaDXy16Auf80_MQ==/109951163295103504.jpg", 
+                    "publishTime": 1526083200000, 
+                    "description": "", 
+                    "tags": "", 
+                    "company": null, 
+                    "briefDesc": "", 
+                    "artist": {
+                        "name": "", 
+                        "id": 0, 
+                        "picId": 0, 
+                        "img1v1Id": 0, 
+                        "briefDesc": "", 
+                        "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                        "albumSize": 0, 
+                        "alias": [ ], 
+                        "trans": "", 
+                        "musicSize": 0
+                    }, 
+                    "songs": [ ], 
+                    "alias": [ ], 
+                    "status": 0, 
+                    "copyrightId": 0, 
+                    "commentThreadId": "R_AL_3_38644526", 
+                    "artists": [
+                        {
+                            "name": "文氓苏", 
+                            "id": 12494318, 
+                            "picId": 0, 
+                            "img1v1Id": 0, 
+                            "briefDesc": "", 
+                            "picUrl": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                            "img1v1Url": "http://p1.music.126.net/6y-UleORITEDbvrOLV0Q8A==/5639395138885805.jpg", 
+                            "albumSize": 0, 
+                            "alias": [ ], 
+                            "trans": "", 
+                            "musicSize": 0
+                        }
+                    ], 
+                    "subType": "混音版", 
+                    "picId_str": "109951163295103504"
+                }, 
+                "starred": false, 
+                "popularity": 0, 
+                "score": 0, 
+                "starredNum": 0, 
+                "duration": 181138, 
+                "playedNum": 0, 
+                "dayPlays": 0, 
+                "hearTime": 0, 
+                "ringtone": null, 
+                "crbt": null, 
+                "audition": null, 
+                "copyFrom": "", 
+                "commentThreadId": "R_SO_4_560244509", 
+                "rtUrl": null, 
+                "ftype": 0, 
+                "rtUrls": [ ], 
+                "copyright": 0, 
+                "hMusic": {
+                    "name": "", 
+                    "id": 1470762194, 
+                    "size": 7248501, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 320000, 
+                    "playTime": 181138, 
+                    "volumeDelta": -1
+                }, 
+                "mMusic": {
+                    "name": "", 
+                    "id": 1470762195, 
+                    "size": 4349118, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 192000, 
+                    "playTime": 181138, 
+                    "volumeDelta": 0
+                }, 
+                "lMusic": {
+                    "name": "", 
+                    "id": 1470762196, 
+                    "size": 2899426, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 128000, 
+                    "playTime": 181138, 
+                    "volumeDelta": 0
+                }, 
+                "bMusic": {
+                    "name": "", 
+                    "id": 1470762196, 
+                    "size": 2899426, 
+                    "extension": "mp3", 
+                    "sr": 44100, 
+                    "dfsId": 0, 
+                    "bitrate": 128000, 
+                    "playTime": 181138, 
+                    "volumeDelta": 0
+                }, 
+                "rurl": null, 
+                "mvid": 0, 
+                "rtype": 0, 
+                "mp3Url": null
+            }
+        ], 
+        "name": "云音乐赞赏榜", 
+        "position": 4
+    }
+}

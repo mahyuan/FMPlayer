@@ -8,7 +8,7 @@
 						</div> -->
 		<div class="wrap">
 			<div class="item">
-				<router-link to="/musicList">列表</router-link>
+				<router-link to="/Toplist">排行榜</router-link>
 			</div>
 			<div class="item">
 				<router-link to="/find">发现</router-link>
@@ -17,11 +17,14 @@
 				<router-link to="/social">我的</router-link>
 			</div>
 		</div>
+		<!-- <banner></banner> -->
+
 		<router-view></router-view>
 		<div class="main">
 			<span>{{msg}}</span>
 		</div>
 		<div class="footer">
+			
 			<span>footer</span>
 		</div>
 	</div>
@@ -29,7 +32,7 @@
 
 <script>
 	export default {
-		name: 'main',
+		name: 'Index',
 		mounted() {},
 		data() {
 			return {
@@ -40,6 +43,10 @@
 			//   currentTabIndex() {
 			//     //   return this.$state.currentTabIndex
 			//   }
+		},
+		mounted() {
+			
+			
 		}
 	}
 </script>

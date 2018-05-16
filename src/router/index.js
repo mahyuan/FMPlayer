@@ -1,20 +1,20 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import MusicList from '../components/musicList'
+import Toplist from '../components/Toplist'
 import Find from '../components/find'
 import Social from '../components/social'
-// import main from '../components/main'
+// import index from '../components/index'
 
 Vue.use(Router)
 
 var routes = [
     {
         path: '/',
-        component: MusicList
+        component: Toplist
     },
     {
-        path: '/musiclist',
-        component: MusicList
+        path: '/Toplist',
+        component: Toplist
     },
     {
         path: '/find',

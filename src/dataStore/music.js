@@ -1,6 +1,10 @@
 import axios from 'axios'
 let URL = 'http://localhost:3000'
-
+// const config = {
+// 	headers: {
+// 	  'Access-Control-Allow-Origin': '*',
+// 	}
+// }
 //排行榜榜单
 export function getToplistDetail() {
 	const url = URL + '/toplist/detail'
@@ -13,7 +17,8 @@ export function topList(idx) {
 	return axios.get(url, {
 		params: {
 			idx
-		}
+		},
+
 	})
 }
 // 搜索
@@ -22,7 +27,8 @@ export function search(keywords) {
 	return axios.get(url, {
 		params: {
 			keywords
-		}
+		},
+
 	})
 }
 
@@ -33,7 +39,8 @@ export function getTopArtists( offset = 0, limit = 50 ) {
 		params: {
 			offset: offset,
 			limit: limit
-		}
+		},
+
 	})
 }
 

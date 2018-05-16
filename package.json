@@ -29,7 +29,6 @@
   },
   "devDependencies": {
     "@vue/component-compiler-utils": "^1.2.1",
-    "babel-preset-env": "^1.6.1",
     "parcel-bundler": "^1.8.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
