@@ -1,3 +1,9 @@
+<style lang="stylus" scoped>
+.social
+    width: 100%
+    color: blue
+</style>
+
 <template>
     <div class="social">
         <span>Social</span>
@@ -10,11 +16,5 @@ export default {
   data() {
       return {}
   }
-}
+};
 </script>
-<style lang="stylus" scoped>
-.social
-    width: 100%
-    color: blue
-</style>
-

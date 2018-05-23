@@ -85,5 +85,5 @@
     methods: {
   
     },
-  }
+  };
 </script>
