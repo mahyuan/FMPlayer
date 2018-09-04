@@ -66,7 +66,6 @@
           key++
           if (key >= len) key = 0
           cont.style.transform = `translateX(-${itemWidth*key}px)`
-
           /* 
           let animation = cont.animate([
             {transform: `translateX(-${itemWidth*key}px)`},
@@ -83,7 +82,6 @@
       })
     },
     methods: {
-  
     },
   };
 </script>
