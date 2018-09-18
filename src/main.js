@@ -4,6 +4,7 @@ import App from './App'
 import router from './router'
 import store from './vuex'
 import Index from './components/index'
+let Music = require('./lib/audio.js');
 
 const isDebug_mode = process.env.NODE_ENV !== 'production'
 
@@ -20,5 +21,10 @@ new Vue({
 	// components: {
 	// 	Tab: Tab
 	// },
+	methods: {
+	},
+	mounted() {
+		new Music({selector: 'div[data-audio]'});
+	},
 	render: h => h(App)
 })
