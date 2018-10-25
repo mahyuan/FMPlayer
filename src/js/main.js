@@ -215,71 +215,174 @@ proto.bind = function(){
 	})
 }
 
-proto.getSong = function(){
-	let that =  this
-	$.ajax({
-		url: 'http://api.jirengu.com/fm/getSong.php',
-		method: 'get',
-		dataType: 'json',
-		data: {
-			'channel': 'data.channel_id'
-		}
-	}).done(function(song){
-		let ret = song.song[0]
-		// console.log(ret)
-		let songURL = ret.url
-		let songTitle = ret.title
-		let songArtist = ret.artist
-		let songImg = ret.picture
-		let songId = ret.sid
+// proto.getSong = function(){
+// 	let that =  this
+// 	$.ajax({
+// 		url: 'http://api.jirengu.com/fm/getSong.php',
+// 		method: 'get',
+// 		dataType: 'json',
+// 		data: {
+// 			'channel': 'data.channel_id'
+// 		}
+// 	}).done(function(song){
+// 		let ret = song.song[0]
+// 		// console.log(ret)
+// 		let songURL = ret.url
+// 		let songTitle = ret.title
+// 		let songArtist = ret.artist
+// 		let songImg = ret.picture
+// 		let songId = ret.sid
 
 
-		that.music.setAttribute('src', songURL)
-		that.imgShow.setAttribute('src', songImg)
-		that.songArtist.innerText = songArtist
-		that.songTitle.innerText = songTitle
-		that.playing = true
+// 		that.music.setAttribute('src', songURL)
+// 		that.imgShow.setAttribute('src', songImg)
+// 		that.songArtist.innerText = songArtist
+// 		that.songTitle.innerText = songTitle
+// 		that.playing = true
 
-	}).fail(function(){
-		that.getSong()
-	})
+// 	}).fail(function(){
+// 		that.getSong()
+// 	})
+// }
+
+proto.getSong = function() {
+    let that = this;
+    try {
+        let xml = new XMLHttpRequest();
+        xml.onreadystatechange = function() {
+            if(xml.readyState === 4 ) {
+                if (xml.status === 200) {   
+                    let song = JSON.parse(xml.responseText);
+                    let ret = song.song[0]
+                    
+                    let songURL = ret.url
+                    let songTitle = ret.title
+                    let songArtist = ret.artist
+                    let songImg = ret.picture
+                    let songId = ret.sid
+                    
+                    that.music.setAttribute('src', songURL)
+                    that.imgShow.setAttribute('src', songImg)
+                    that.songArtist.innerText = songArtist
+                    that.songTitle.innerText = songTitle
+                    that.playing = true
+                } else {
+                    that.getSong();
+                }
+            }
+        }
+        xml.open('GET', 'http://api.jirengu.com/fm/getSong.php', true);
+        xml.send();
+    } catch (e) {
+        console.log(e);
+    }
 }
-proto.getChannels = function(){
-	let that = this
-	$.ajax({
-		url: 'http://api.jirengu.com/fm/getChannels.php',
-		method: 'get',
-		dataType: 'json'
-	}).done(function(response){
-		// console.log(response)
-		let channels = response.channels
-		that.renderChanels(channels)
-		that.getSong(channels[0])
-		that.playing = true
-		that.pauseIcon.classList.remove('active')
-		that.playIcon.classList.add('active')
-		that.imgCt.classList.add('img-rotate')
 
-	}).fail(function(){
-		that.songCt.innerText('获取清单失败')
-	})
+// proto.getChannels = function(){
+// 	let that = this
+// 	$.ajax({
+// 		url: 'http://api.jirengu.com/fm/getChannels.php',
+// 		method: 'get',
+// 		dataType: 'json'
+// 	}).done(function(response){
+// 		// console.log(response)
+// 		let channels = response.channels
+// 		that.renderChanels(channels)
+// 		that.getSong(channels[0])
+// 		that.playing = true
+// 		that.pauseIcon.classList.remove('active')
+// 		that.playIcon.classList.add('active')
+// 		that.imgCt.classList.add('img-rotate')
+
+// 	}).fail(function(){
+// 		that.songCt.innerText('获取清单失败')
+// 	})
+// }
+
+proto.getChannels = function() {
+    let that = this;
+    if(window.XMLHttpRequest) {
+        let xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function() {
+            if(xhr.readyState === 4) {
+                if(xhr.status = 200 ) {
+                    let channels = JSON.parse(xhr.responseText).channels;                    
+                    that.renderChanels(channels);
+                    that.getSong(channels[0]);
+                    that.playing = true;
+                    that.pauseIcon.classList.remove('active');
+                    that.playIcon.classList.add('active');
+                    that.imgCt.classList.add('img-rotate');
+                }
+            }
+        }
+        xhr.open('GET', 'http://api.jirengu.com/fm/getChannels.php', true);
+        xhr.send();
+    }
+
+        
+    // try {
+    //     let xml = new XMLHttpRequest();
+    //     xml.onreadystatechange = function(resp)  {            
+    //         if(xml.readyState === 4 && xml.status >= 200) {
+    //             // console.log('data', xml.response);
+                
+    //             let data = JSON.parse(xml.responseText);
+    //             // var type = xml.getResponseHeader('Content-type'); 
+    //             let channels = data.channels
+    //             console.log(channels)
+
+    //             that.renderChanels(channels);
+    //             that.getSong(channels[0]);
+    //             that.playing = true;
+    //             that.pauseIcon.classList.remove('active');
+    //             that.playIcon.classList.add('active');
+    //             that.imgCt.classList.add('img-rotate');
+    //         }
+    //     }
+    //     xml.open('GET', 'http://api.jirengu.com/fm/getChannels.php', true);
+    //     xml.send();
+    // } catch (e) {
+    //     console.log(e);
+    // }
 }
 
-proto.getLyric = function(){
-	var that = this
-	$.ajax({
-		url: 'http://api.jirengu.com/fm/getLyric.php',
-		method: 'get',
-		dataType: 'json',
-		data: {sid : songId}, //是否可以获取到该变量，请核对
-	}).done(function(ret){
-		that.renderLyric(ret.lyric)
-	}).dail(function(){
-		that.lyric.innerText = "这首歌没有歌词！"
-	})
+// proto.getLyric = function(){
+// 	var that = this
+// 	$.ajax({
+// 		url: 'http://api.jirengu.com/fm/getLyric.php',
+// 		method: 'get',
+// 		dataType: 'json',
+// 		data: {sid : songId}, //是否可以获取到该变量，请核对
+// 	}).done(function(ret){
+// 		that.renderLyric(ret.lyric)
+// 	}).dail(function(){
+// 		that.lyric.innerText = "这首歌没有歌词！"
+// 	})
+// }
+
+proto.getLyric = function() {
+    let that = this;    
+    try {
+        let xml = new XMLHttpRequest();
+        xml.onreadystatechange = function() {
+            if(xml.readyState === 4) {
+                if (xml.status === 200) {
+                    let data = xml.responseText;
+                }
+            }
+        }
+        xml.open('GET', 'http://api.jirengu.com/fm/getLyric.php', true);
+        xml.send();
+    } catch (e) {
+        console.log(e);
+    }
+
 }
+
 proto.playSong = function(){
-	this.music.play()
+    this.music.play()
+    this.music.getLyric();
 }
 proto.renderLyric = function(e){  //解析歌词,返回一个二维数组
 	let that = this
@@ -372,3 +475,4 @@ proto.onpause = function(){
 	clearInterval(timer)
 }
 new Music(document.querySelector('.container'))
+
