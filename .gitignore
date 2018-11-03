@@ -7,3 +7,5 @@ node_modules
 *.log
 dist
 .edtorconfig
+yarn.lock
+package-lock.json
