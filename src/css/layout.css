@@ -42,14 +42,6 @@ audio {
 
 .container {
 	position: relative;
-	/* display: flex;
-	flex-direction: column;
-	flex-wrap:wrap;
-	justify-content: flex-start	;
-	align-items: stretch;
-	box-sizing: border-box; */
-	/* width: 414px; */
-	/* height:100%; */
 	min-height: 736px;
 	margin: auto;
 	box-shadow: 0 0 1rem rgba(102, 89, 89, 0.4), -0.3rem -0.3rem 1rem rgba(102, 89, 89, 0.4);
