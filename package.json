@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/mhy-web/FMPlayer#readme",
   "dependencies": {
-    "jquery": "^3.3.1",
+    "jquery": "^3.5.0",
     "vue": "^2.5.13"
   }
 }
